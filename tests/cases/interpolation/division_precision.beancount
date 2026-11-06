@@ -1,0 +1,11 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "A third, elided"
+  Expenses:Food   10 / 3 GBP
+  Assets:Cash
+
+2024-01-03 * "A third, explicit"
+  Expenses:Food   10 / 3 GBP
+  Expenses:Food   20 / 3 GBP
+  Assets:Cash    -10 GBP

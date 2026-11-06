@@ -1,0 +1,202 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "reduce_fifo.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Holdings",
+      "currencies": ["VAFTGAG"],
+      "booking": "FIFO"
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "reduce_fifo.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "reduce_fifo.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Income:Gains",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "reduce_fifo.beancount",
+      "line": 5,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy one",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "10",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "200.00",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-2000.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "reduce_fifo.beancount",
+      "line": 9,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy two",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "10",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "210.00",
+            "currency": "GBP",
+            "date": "2024-01-03",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-2100.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "reduce_fifo.beancount",
+      "line": 13,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Sell across lots",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "-10",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "200.00",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": {
+            "number": "250.00",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "-5",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "210.00",
+            "currency": "GBP",
+            "date": "2024-01-03",
+            "label": null
+          },
+          "price": {
+            "number": "250.00",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "3750.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Income:Gains",
+          "units": {
+            "number": "-700.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-350.00"
+    },
+    "Assets:Holdings": {
+      "VAFTGAG": "5"
+    },
+    "Income:Gains": {
+      "GBP": "-700.00"
+    }
+  }
+}

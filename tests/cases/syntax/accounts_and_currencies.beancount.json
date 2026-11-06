@@ -1,0 +1,141 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "accounts_and_currencies.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:UK:Bank-Account:Current2",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "accounts_and_currencies.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:2024:Savings",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "accounts_and_currencies.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Liabilities:Credit:Card",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "accounts_and_currencies.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Equity:Opening-Balances",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "accounts_and_currencies.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Income:Salary",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "accounts_and_currencies.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Expenses:Food:Eating-Out",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "accounts_and_currencies.beancount",
+      "line": 7,
+      "meta": {},
+      "account": "Assets:Investments",
+      "currencies": ["VAFTGAG", "HOUSE.23HAZELCLOSE", "NUTMEG_PENSION_GBP"],
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "accounts_and_currencies.beancount",
+      "line": 9,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Odd currency names",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Investments",
+          "units": {
+            "number": "1",
+            "currency": "HOUSE.23HAZELCLOSE"
+          },
+          "cost": {
+            "number": "100",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Investments",
+          "units": {
+            "number": "2",
+            "currency": "NUTMEG_PENSION_GBP"
+          },
+          "cost": {
+            "number": "1",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening-Balances",
+          "units": {
+            "number": "-102",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Investments": {
+      "HOUSE.23HAZELCLOSE": "1",
+      "NUTMEG_PENSION_GBP": "2"
+    },
+    "Equity:Opening-Balances": {
+      "GBP": "-102"
+    }
+  }
+}

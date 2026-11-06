@@ -1,0 +1,267 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "augment.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Holdings",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "augment.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "augment.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Assets:Property",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "augment.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Equity:Opening-Balances",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "augment.beancount",
+      "line": 6,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy with a cost",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "10",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "200.00",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-2000.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "augment.beancount",
+      "line": 10,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy with a dated cost",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "5",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "210.00",
+            "currency": "GBP",
+            "date": "2023-12-31",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1050.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "augment.beancount",
+      "line": 14,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy with a label",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "1",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "220.00",
+            "currency": "GBP",
+            "date": "2024-01-04",
+            "label": "lot-a"
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-220.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-05",
+      "file": "augment.beancount",
+      "line": 18,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy with a cost and a price",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "2",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "230.00",
+            "currency": "GBP",
+            "date": "2024-01-05",
+            "label": null
+          },
+          "price": {
+            "number": "231.00",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-460.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-06",
+      "file": "augment.beancount",
+      "line": 22,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "House",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Property",
+          "units": {
+            "number": "1",
+            "currency": "HOUSE.23HAZELCLOSE"
+          },
+          "cost": {
+            "number": "416000.00",
+            "currency": "GBP",
+            "date": "2024-01-01",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening-Balances",
+          "units": {
+            "number": "-416000.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-3730.00"
+    },
+    "Assets:Holdings": {
+      "VAFTGAG": "18"
+    },
+    "Assets:Property": {
+      "HOUSE.23HAZELCLOSE": "1"
+    },
+    "Equity:Opening-Balances": {
+      "GBP": "-416000.00"
+    }
+  }
+}

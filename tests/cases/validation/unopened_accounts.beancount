@@ -1,0 +1,14 @@
+2024-01-01 open Equity:Opening-Balances
+
+2024-01-01 * "Uses accounts that are never opened"
+  Assets:Bank:Current     100.00 GBP
+  Expenses:Food            10.00 GBP
+  Expenses:Food             5.00 GBP
+  Equity:Opening-Balances
+
+2024-01-02 balance Assets:Bank:Current   100.00 GBP
+2024-01-02 balance Assets:Bank:Savings   0 GBP
+2024-01-02 balance Assets:Bank:Closed    0 GBP
+2024-01-02 balance Assets:Bank:Current   99.00 GBP
+
+2024-02-01 close Assets:Bank:Closed

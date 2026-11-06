@@ -1,0 +1,19 @@
+2024-01-01 open Assets:Holdings
+2024-01-01 open Assets:Cash
+2024-01-01 open Income:Gains
+
+2024-01-02 * "Buy"
+  Assets:Holdings    10 VAFTGAG {200.00 GBP}
+  Assets:Cash
+
+2024-01-03 * "Sell part of the only lot"
+  Assets:Holdings    -4 VAFTGAG {} @ 250.00 GBP
+  Assets:Cash      1000.00 GBP
+  Income:Gains
+
+2024-01-04 * "Sell naming the cost"
+  Assets:Holdings    -1 VAFTGAG {200.00 GBP} @ 250.00 GBP
+  Assets:Cash       250.00 GBP
+  Income:Gains
+
+2024-01-05 balance Assets:Holdings  5 VAFTGAG

@@ -1,0 +1,14 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Integers infer no tolerance"
+  Expenses:Food   10 GBP
+  Assets:Cash    -9.9 GBP
+
+2024-01-03 * "Integers and decimals"
+  Expenses:Food   10 GBP
+  Assets:Cash    -9.99 GBP
+
+2024-01-04 * "Single decimal place"
+  Expenses:Food   10.04 GBP
+  Assets:Cash    -10.0 GBP

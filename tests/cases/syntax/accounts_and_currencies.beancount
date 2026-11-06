@@ -1,0 +1,12 @@
+2024-01-01 open Assets:UK:Bank-Account:Current2
+2024-01-01 open Assets:2024:Savings
+2024-01-01 open Liabilities:Credit:Card
+2024-01-01 open Equity:Opening-Balances
+2024-01-01 open Income:Salary
+2024-01-01 open Expenses:Food:Eating-Out
+2024-01-01 open Assets:Investments  VAFTGAG,HOUSE.23HAZELCLOSE,NUTMEG_PENSION_GBP
+
+2024-01-02 * "Odd currency names"
+  Assets:Investments            1 HOUSE.23HAZELCLOSE {100 GBP}
+  Assets:Investments            2 NUTMEG_PENSION_GBP {1 GBP}
+  Equity:Opening-Balances

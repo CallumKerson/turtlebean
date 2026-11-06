@@ -1,0 +1,54 @@
+{
+  "errors": [
+    {
+      "kind": "PadError",
+      "file": "unused.beancount",
+      "line": 4
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unused.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unused.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Equity:Opening-Balances",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Pad",
+      "date": "2024-01-01",
+      "file": "unused.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Assets:Cash",
+      "source_account": "Equity:Opening-Balances"
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-05",
+      "file": "unused.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    }
+  ],
+  "balances": {}
+}

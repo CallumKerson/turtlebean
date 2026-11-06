@@ -1,0 +1,162 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "repeated.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "repeated.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Equity:Opening-Balances",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Pad",
+      "date": "2024-01-01",
+      "file": "repeated.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Assets:Cash",
+      "source_account": "Equity:Opening-Balances"
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-01",
+      "file": "repeated.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "P",
+      "payee": null,
+      "narration": "(Padding inserted for Balance of 10.00 GBP for difference 10.00 GBP)",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening-Balances",
+          "units": {
+            "number": "-10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "repeated.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "10.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Pad",
+      "date": "2024-01-03",
+      "file": "repeated.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:Cash",
+      "source_account": "Equity:Opening-Balances"
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "repeated.beancount",
+      "line": 6,
+      "meta": {},
+      "flag": "P",
+      "payee": null,
+      "narration": "(Padding inserted for Balance of 15.00 GBP for difference 5.00 GBP)",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "5.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening-Balances",
+          "units": {
+            "number": "-5.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-04",
+      "file": "repeated.beancount",
+      "line": 7,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "15.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-05",
+      "file": "repeated.beancount",
+      "line": 8,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "15.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "15.00"
+    },
+    "Equity:Opening-Balances": {
+      "GBP": "-15.00"
+    }
+  }
+}

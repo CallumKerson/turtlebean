@@ -1,0 +1,170 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "merged_lot_cost.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Shares",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "merged_lot_cost.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "merged_lot_cost.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Cost written as 0.9",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Shares",
+          "units": {
+            "number": "10",
+            "currency": "ABC"
+          },
+          "cost": {
+            "number": "0.9",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-9.0",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "merged_lot_cost.beancount",
+      "line": 8,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Same cost written as 0.90 merges into the lot",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Shares",
+          "units": {
+            "number": "10",
+            "currency": "ABC"
+          },
+          "cost": {
+            "number": "0.90",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-9.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "merged_lot_cost.beancount",
+      "line": 12,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Reduction reports the latest form",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Shares",
+          "units": {
+            "number": "-5",
+            "currency": "ABC"
+          },
+          "cost": {
+            "number": "0.90",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "5.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-0.50",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-13.50"
+    },
+    "Assets:Shares": {
+      "ABC": "15"
+    }
+  }
+}

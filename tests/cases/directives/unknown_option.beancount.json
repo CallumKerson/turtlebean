@@ -1,0 +1,22 @@
+{
+  "errors": [
+    {
+      "kind": "ParserError",
+      "file": "unknown_option.beancount",
+      "line": 1
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unknown_option.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    }
+  ],
+  "balances": {}
+}

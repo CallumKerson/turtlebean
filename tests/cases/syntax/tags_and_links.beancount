@@ -1,0 +1,19 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Misc
+
+2024-01-02 * "Payee" "Narration" #joint ^tx-0001
+  Expenses:Misc   1.00 GBP
+  Assets:Cash
+
+2024-01-03 * "Several" #b-tag #a_tag ^link2 ^link1 #a_tag
+  Expenses:Misc   1.00 GBP
+  Assets:Cash
+
+2024-01-04 * "Tags on the next line"
+  #continued ^also-continued
+  Expenses:Misc   1.00 GBP
+  Assets:Cash
+
+2024-01-05 * "Quoted-looking link" ^tx_0000ABC-def.123
+  Expenses:Misc   1.00 GBP
+  Assets:Cash

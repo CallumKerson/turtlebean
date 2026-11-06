@@ -1,0 +1,15 @@
+2024-01-01 open Assets:Shares
+2024-01-01 open Assets:Cash
+
+2024-01-02 * "Cost written as 0.9"
+  Assets:Shares   10 ABC {0.9 GBP}
+  Assets:Cash
+
+2024-01-02 * "Same cost written as 0.90 merges into the lot"
+  Assets:Shares   10 ABC {0.90 GBP}
+  Assets:Cash
+
+2024-01-03 * "Reduction reports the latest form"
+  Assets:Shares   -5 ABC {0.90 GBP} @ 1.00 GBP
+  Assets:Cash      5.00 GBP
+  Assets:Cash

@@ -1,0 +1,6 @@
+2024-01-01 open Assets:Cash
+
+2024-01-02 balance Assets:Unknown  0 GBP
+2024-01-02 pad Assets:Cash Equity:Unknown
+2024-01-03 balance Assets:Cash  10.00 GBP
+2024-01-04 close Assets:NeverOpened

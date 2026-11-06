@@ -1,0 +1,7 @@
+2010-01-01 custom "autofix" "rule"
+  payee: "Tesco"
+  account: "Expenses:Groceries"
+
+2010-01-01 custom "valuation" Assets:Pension 2024-01-01 1000.00 GBP TRUE 42 "text"
+
+2010-01-01 custom "fava-option" "default-page" "income_statement/"

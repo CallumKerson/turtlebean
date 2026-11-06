@@ -1,0 +1,85 @@
+{
+  "errors": [
+    {
+      "kind": "ParserError",
+      "file": "unicode_accounts.beancount",
+      "line": 2
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unicode_accounts.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Expenses:École-républicaine",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unicode_accounts.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Équité:Ouverture",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unicode_accounts.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Assets:Bank",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "unicode_accounts.beancount",
+      "line": 5,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Accented account names",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:École-républicaine",
+          "units": {
+            "number": "10.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Bank",
+          "units": {
+            "number": "-10.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Bank": {
+      "EUR": "-10.00"
+    },
+    "Expenses:École-républicaine": {
+      "EUR": "10.00"
+    }
+  }
+}

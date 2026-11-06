@@ -1,0 +1,37 @@
+{
+  "errors": [
+    {
+      "kind": "ParserError",
+      "file": "bad_account.beancount",
+      "line": 2
+    },
+    {
+      "kind": "LexerError",
+      "file": "bad_account.beancount",
+      "line": 3
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "bad_account.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "bad_account.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "NotARoot:Thing",
+      "currencies": null,
+      "booking": null
+    }
+  ],
+  "balances": {}
+}

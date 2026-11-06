@@ -1,0 +1,82 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Custom",
+      "date": "2010-01-01",
+      "file": "custom.beancount",
+      "line": 1,
+      "meta": {
+        "account": {
+          "string": "Expenses:Groceries"
+        },
+        "payee": {
+          "string": "Tesco"
+        }
+      },
+      "custom_type": "autofix",
+      "values": [
+        {
+          "dtype": "str",
+          "string": "rule"
+        }
+      ]
+    },
+    {
+      "type": "Custom",
+      "date": "2010-01-01",
+      "file": "custom.beancount",
+      "line": 5,
+      "meta": {},
+      "custom_type": "valuation",
+      "values": [
+        {
+          "dtype": "<AccountDummy>",
+          "string": "Assets:Pension"
+        },
+        {
+          "dtype": "date",
+          "date": "2024-01-01"
+        },
+        {
+          "dtype": "Amount",
+          "amount": {
+            "number": "1000.00",
+            "currency": "GBP"
+          }
+        },
+        {
+          "dtype": "bool",
+          "bool": true
+        },
+        {
+          "dtype": "Decimal",
+          "number": "42"
+        },
+        {
+          "dtype": "str",
+          "string": "text"
+        }
+      ]
+    },
+    {
+      "type": "Custom",
+      "date": "2010-01-01",
+      "file": "custom.beancount",
+      "line": 7,
+      "meta": {},
+      "custom_type": "fava-option",
+      "values": [
+        {
+          "dtype": "str",
+          "string": "default-page"
+        },
+        {
+          "dtype": "str",
+          "string": "income_statement/"
+        }
+      ]
+    }
+  ],
+  "balances": {}
+}

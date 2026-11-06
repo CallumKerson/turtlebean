@@ -1,0 +1,10 @@
+2024-01-01 open Assets:Holdings
+2024-01-01 open Assets:Cash
+
+2024-01-02 * "Weight from a cost"
+  Assets:Holdings    29.23 VAFTGAG {192.1114959716797 GBP, 2023-12-31}
+  Assets:Cash
+
+2024-01-03 * "Weight from a total cost"
+  Assets:Holdings    10 VAFTGAG {{2000.00 GBP}}
+  Assets:Cash

@@ -1,0 +1,22 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Misc
+
+2024-01-02 * "Thousands separators"
+  Expenses:Misc   1,234.56 GBP
+  Assets:Cash    -1,234.56 GBP
+
+2024-01-03 * "Plus sign and no leading digit"
+  Expenses:Misc   +7 GBP
+  Assets:Cash    -7 GBP
+
+2024-01-04 * "Many decimal places"
+  Expenses:Misc   0.123456789012 GBP
+  Assets:Cash    -0.123456789012 GBP
+
+2024-01-05 * "Trailing zeros kept"
+  Expenses:Misc   10.5000 GBP
+  Assets:Cash    -10.5000 GBP
+
+2024-01-06 * "Leading dot"
+  Expenses:Misc   .50 GBP
+  Assets:Cash    -.50 GBP

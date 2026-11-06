@@ -1,0 +1,142 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "two_currencies.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "two_currencies.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Equity:Opening-Balances",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Pad",
+      "date": "2024-01-01",
+      "file": "two_currencies.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Assets:Cash",
+      "source_account": "Equity:Opening-Balances"
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-01",
+      "file": "two_currencies.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "P",
+      "payee": null,
+      "narration": "(Padding inserted for Balance of 10.00 GBP for difference 10.00 GBP)",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening-Balances",
+          "units": {
+            "number": "-10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-01",
+      "file": "two_currencies.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "P",
+      "payee": null,
+      "narration": "(Padding inserted for Balance of 20.00 EUR for difference 20.00 EUR)",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "20.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening-Balances",
+          "units": {
+            "number": "-20.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-05",
+      "file": "two_currencies.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "10.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-05",
+      "file": "two_currencies.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "20.00",
+        "currency": "EUR"
+      },
+      "tolerance": null
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "EUR": "20.00",
+      "GBP": "10.00"
+    },
+    "Equity:Opening-Balances": {
+      "EUR": "-20.00",
+      "GBP": "-10.00"
+    }
+  }
+}

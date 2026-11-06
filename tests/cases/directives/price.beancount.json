@@ -1,0 +1,50 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Commodity",
+      "date": "2024-01-01",
+      "file": "price.beancount",
+      "line": 1,
+      "meta": {},
+      "currency": "VAFTGAG"
+    },
+    {
+      "type": "Price",
+      "date": "2024-02-04",
+      "file": "price.beancount",
+      "line": 2,
+      "meta": {},
+      "currency": "VAFTGAG",
+      "amount": {
+        "number": "238.1864013671875",
+        "currency": "GBP"
+      }
+    },
+    {
+      "type": "Price",
+      "date": "2024-03-04",
+      "file": "price.beancount",
+      "line": 3,
+      "meta": {},
+      "currency": "VAFTGAG",
+      "amount": {
+        "number": "216.60",
+        "currency": "GBP"
+      }
+    },
+    {
+      "type": "Price",
+      "date": "2024-03-04",
+      "file": "price.beancount",
+      "line": 4,
+      "meta": {},
+      "currency": "HOUSE.23HAZELCLOSE",
+      "amount": {
+        "number": "465000",
+        "currency": "GBP"
+      }
+    }
+  ],
+  "balances": {}
+}

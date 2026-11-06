@@ -1,0 +1,10 @@
+2024-01-01 open Assets:Plain
+2024-01-01 open Assets:OneCurrency GBP
+2024-01-01 open Assets:TwoCurrencies GBP,USD
+2024-01-01 open Assets:Spaced    GBP, EUR
+2024-01-01 open Assets:Fifo "FIFO"
+2024-01-01 open Assets:Strict GBP "STRICT"
+2024-01-01 open Assets:Lifo "LIFO"
+2024-01-01 open Assets:None "NONE"
+2024-02-01 close Assets:Plain
+  reason: "moved"

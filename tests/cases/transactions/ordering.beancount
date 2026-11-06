@@ -1,0 +1,15 @@
+2024-01-03 * "Written first, dated later"
+  Expenses:Food   1.00 GBP
+  Assets:Cash
+
+2024-01-02 close Expenses:Unused
+2024-01-02 balance Assets:Cash  0 GBP
+2024-01-02 * "Same date as a balance and a close"
+  Expenses:Food   2.00 GBP
+  Assets:Cash
+2024-01-02 price VAFTGAG  10 GBP
+2024-01-02 commodity VAFTGAG
+
+2024-01-01 open Expenses:Unused
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food

@@ -1,0 +1,9 @@
+2024-01-01 open Assets:Holdings
+2024-01-01 open Assets:Cash
+
+2024-01-02 * "Buy"
+  Assets:Holdings    29.23 VAFTGAG {192.11 GBP}
+  Assets:Cash
+
+2024-01-03 balance Assets:Holdings   29.23 VAFTGAG
+2024-01-03 balance Assets:Cash   -5615.3753 GBP

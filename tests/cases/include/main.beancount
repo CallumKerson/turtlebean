@@ -1,0 +1,8 @@
+option "operating_currency" "GBP"
+
+include "accounts.inc.beancount"
+include "sub/2024.inc.beancount"
+
+2024-01-03 * "In main"
+  Expenses:Food   1.00 GBP
+  Assets:Cash

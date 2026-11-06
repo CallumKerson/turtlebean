@@ -1,0 +1,47 @@
+# Third-party ledgers for conformance testing.
+#
+# `mise run corpus:fetch` downloads each source at its pinned commit into
+# tests/corpus/<name>/, which is gitignored: these files carry their own
+# licences and are never committed. Only files under `dir` are kept.
+
+[[source]]
+name = "beancount"
+repo = "beancount/beancount"
+rev = "9747213802acb733ce53acc6e963f5961f47d6cd"
+dir = "examples"
+licence = "GPL-2.0"
+
+[[source]]
+name = "fava"
+repo = "beancount/fava"
+rev = "12d6fea6f51c76f031f9607909c3c10b28455095"
+dir = "tests/data"
+licence = "MIT"
+
+[[source]]
+name = "beangulp"
+repo = "beancount/beangulp"
+rev = "81972f0e2ad14f24140598cb292bedbb20fe6a83"
+dir = "examples"
+licence = "GPL-2.0"
+
+[[source]]
+name = "beancount-import"
+repo = "jbms/beancount-import"
+rev = "b8c2010a027515307eb6ee043a87151aeed2d3ff"
+dir = "testdata"
+licence = "GPL-2.0"
+
+[[source]]
+name = "ledger2beancount"
+repo = "zacchiro/ledger2beancount"
+rev = "4f75f6fc9981673846bfe9850433effe406c10f6"
+dir = "tests"
+licence = "GPL-3.0"
+
+# Generated locally by Python beancount's bean-example with a fixed seed.
+[bean_example]
+seed = 1
+date_begin = "2020-01-01"
+date_end = "2024-12-31"
+date_birth = "1990-01-01"

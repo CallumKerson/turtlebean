@@ -1,0 +1,85 @@
+{
+  "errors": [
+    {
+      "kind": "ParserError",
+      "file": "account_root_names.beancount",
+      "line": 6
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "account_root_names.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Aktiva:Bank",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "account_root_names.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Ausgaben:Essen",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "account_root_names.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:Old",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "account_root_names.beancount",
+      "line": 8,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Renamed roots",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Ausgaben:Essen",
+          "units": {
+            "number": "10.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Aktiva:Bank",
+          "units": {
+            "number": "-10.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Aktiva:Bank": {
+      "EUR": "-10.00"
+    },
+    "Ausgaben:Essen": {
+      "EUR": "10.00"
+    }
+  }
+}

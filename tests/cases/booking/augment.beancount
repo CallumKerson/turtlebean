@@ -1,0 +1,24 @@
+2024-01-01 open Assets:Holdings
+2024-01-01 open Assets:Cash
+2024-01-01 open Assets:Property
+2024-01-01 open Equity:Opening-Balances
+
+2024-01-02 * "Buy with a cost"
+  Assets:Holdings    10 VAFTGAG {200.00 GBP}
+  Assets:Cash
+
+2024-01-03 * "Buy with a dated cost"
+  Assets:Holdings    5 VAFTGAG {210.00 GBP, 2023-12-31}
+  Assets:Cash
+
+2024-01-04 * "Buy with a label"
+  Assets:Holdings    1 VAFTGAG {220.00 GBP, "lot-a"}
+  Assets:Cash
+
+2024-01-05 * "Buy with a cost and a price"
+  Assets:Holdings    2 VAFTGAG {230.00 GBP} @ 231.00 GBP
+  Assets:Cash
+
+2024-01-06 * "House"
+  Assets:Property    1 HOUSE.23HAZELCLOSE {416000.00 GBP, 2024-01-01}
+  Equity:Opening-Balances

@@ -1,0 +1,11 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Income:Salary
+
+2024-01-01 balance Assets:Cash   0 GBP
+
+2024-01-02 * "Pay"
+  Assets:Cash      100.00 GBP
+  Income:Salary
+
+2024-01-02 balance Assets:Cash   0.00 GBP
+2024-01-03 balance Assets:Cash   100.00 GBP

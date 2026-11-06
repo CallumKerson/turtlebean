@@ -1,0 +1,5 @@
+2024-01-01 open Assets:Bank
+
+2024-01-02 * "Bad byte ÿ here"
+  Assets:Bank   1.00 GBP
+  Assets:Bank  -1.00 GBP

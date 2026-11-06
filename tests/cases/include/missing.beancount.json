@@ -1,0 +1,22 @@
+{
+  "errors": [
+    {
+      "kind": "LoadError",
+      "file": "<load>",
+      "line": 0
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "missing.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    }
+  ],
+  "balances": {}
+}

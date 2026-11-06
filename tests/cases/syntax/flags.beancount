@@ -1,0 +1,22 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Misc
+
+2024-01-02 * "Complete"
+  Expenses:Misc   1.00 GBP
+  Assets:Cash
+
+2024-01-03 ! "Incomplete"
+  Expenses:Misc   1.00 GBP
+  Assets:Cash
+
+2024-01-04 txn "Keyword"
+  Expenses:Misc   1.00 GBP
+  Assets:Cash
+
+2024-01-05 * "Posting flags"
+  ! Expenses:Misc   1.00 GBP
+  * Assets:Cash
+
+2024-01-06 txn
+  Expenses:Misc   1.00 GBP
+  Assets:Cash

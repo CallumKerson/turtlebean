@@ -1,0 +1,188 @@
+{
+  "errors": [
+    {
+      "kind": "LexerError",
+      "file": "numbers.beancount",
+      "line": 21
+    },
+    {
+      "kind": "LexerError",
+      "file": "numbers.beancount",
+      "line": 22
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "numbers.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "numbers.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Misc",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "numbers.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Thousands separators",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "1234.56",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1234.56",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "numbers.beancount",
+      "line": 8,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Plus sign and no leading digit",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "7",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-7",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "numbers.beancount",
+      "line": 12,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Many decimal places",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "0.123456789012",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-0.123456789012",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-05",
+      "file": "numbers.beancount",
+      "line": 16,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Trailing zeros kept",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "10.5000",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-10.5000",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-1252.183456789012"
+    },
+    "Expenses:Misc": {
+      "GBP": "1252.183456789012"
+    }
+  }
+}

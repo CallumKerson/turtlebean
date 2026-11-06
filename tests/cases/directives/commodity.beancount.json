@@ -1,0 +1,29 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Commodity",
+      "date": "2010-01-01",
+      "file": "commodity.beancount",
+      "line": 1,
+      "meta": {},
+      "currency": "GBP"
+    },
+    {
+      "type": "Commodity",
+      "date": "2010-01-01",
+      "file": "commodity.beancount",
+      "line": 2,
+      "meta": {
+        "asset-class": {
+          "string": "equity"
+        },
+        "name": {
+          "string": "Vanguard FTSE Global All Cap"
+        }
+      },
+      "currency": "VAFTGAG"
+    }
+  ],
+  "balances": {}
+}

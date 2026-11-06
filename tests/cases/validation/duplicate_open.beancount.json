@@ -1,0 +1,66 @@
+{
+  "errors": [
+    {
+      "kind": "ValidationError",
+      "file": "duplicate_open.beancount",
+      "line": 2
+    },
+    {
+      "kind": "ValidationError",
+      "file": "duplicate_open.beancount",
+      "line": 3
+    },
+    {
+      "kind": "ValidationError",
+      "file": "duplicate_open.beancount",
+      "line": 5
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "duplicate_open.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-02",
+      "file": "duplicate_open.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Close",
+      "date": "2024-01-03",
+      "file": "duplicate_open.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Assets:Other"
+    },
+    {
+      "type": "Close",
+      "date": "2024-01-03",
+      "file": "duplicate_open.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Assets:Cash"
+    },
+    {
+      "type": "Close",
+      "date": "2024-01-04",
+      "file": "duplicate_open.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Cash"
+    }
+  ],
+  "balances": {}
+}

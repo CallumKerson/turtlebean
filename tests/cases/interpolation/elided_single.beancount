@@ -1,0 +1,15 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Elided last"
+  Expenses:Food   12.34 GBP
+  Assets:Cash
+
+2024-01-03 * "Elided first"
+  Assets:Cash
+  Expenses:Food   7.10 GBP
+
+2024-01-04 * "Elided with several known"
+  Expenses:Food   1.111 GBP
+  Expenses:Food   2.2 GBP
+  Assets:Cash

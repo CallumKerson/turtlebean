@@ -1,0 +1,17 @@
+2024-01-05 open Assets:Cash
+2024-01-05 open Expenses:Food
+2024-01-10 close Expenses:Food
+
+2024-01-02 * "Before open"
+  Expenses:Food   1.00 GBP
+  Assets:Cash
+
+2024-01-10 * "On the close date"
+  Expenses:Food   1.00 GBP
+  Assets:Cash
+
+2024-01-11 * "After close"
+  Expenses:Food   1.00 GBP
+  Assets:Cash
+
+2024-01-12 balance Expenses:Food  0 GBP

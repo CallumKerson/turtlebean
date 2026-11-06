@@ -5,6 +5,10 @@ lockfile = true
 [settings.task]
 show_full_cmd = true
 
+[tasks."cases:record"]
+description = "Record Python beancount's results for the hand-written cases"
+run = "find tests/cases -name '*.beancount' ! -name '*.inc.beancount' -print0 | xargs -0 uv run --quiet --script tests/oracle/dump.py --write"
+
 [tasks.check]
 description = "Run all linter and formatter checks with hk against changed files"
 run = "hk check --no-fail-fast"
@@ -30,6 +34,10 @@ run = ["git fetch origin main", "hk check --from-ref origin/main --to-ref HEAD -
 [tasks.ci]
 description = "Run the checks and tests CI runs"
 depends = ["check-auto", "test"]
+
+[tasks."corpus:fetch"]
+description = "Download the third-party corpus into tests/corpus and record beancount's results"
+run = "uv run --quiet --script tests/oracle/fetch_corpus.py"
 
 [tasks.fix]
 description = "Fix all linter and formatter issues with hk against changed files"
@@ -58,6 +66,11 @@ run = "hk install"
 description = "Run the tests"
 sources = ["Cargo.toml", "Cargo.lock", "src/**/*.rs", "tests/**/*"]
 run = "cargo nextest run --no-tests=warn"
+
+[tasks."test:real-ledger"]
+description = "Compare turtlebean with Python beancount on a real ledger: mise run test:real-ledger <file>"
+usage = 'arg "<ledger>" help="Main ledger file"'
+run = "TURTLEBEAN_REAL_LEDGER={{arg(name='ledger')}} cargo nextest run --no-capture -E 'test(real_ledger)'"
 
 [tools."aqua:owenlamont/ryl"]
 version = "0.25.1"
@@ -90,6 +103,9 @@ depends = ["aube"]
 [tools.pkl]
 version = "0.32.1"
 
+[tools.ruff]
+version = "0.16"
+
 [tools.rumdl]
 version = "0.3.0"
 
@@ -106,3 +122,6 @@ version = "1.8.7"
 
 [tools.typos]
 version = "1.51.1"
+
+[tools.uv]
+version = "0.13.1"

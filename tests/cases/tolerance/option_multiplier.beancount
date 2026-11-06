@@ -1,0 +1,8 @@
+option "inferred_tolerance_multiplier" "1.0"
+
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Residual 0.009 with multiplier 1"
+  Expenses:Food   10.009 GBP
+  Assets:Cash    -10.00 GBP

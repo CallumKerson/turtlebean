@@ -1,0 +1,5 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Equity:Opening-Balances
+
+2024-01-01 pad Assets:Cash Equity:Opening-Balances
+2024-01-05 balance Assets:Cash   250.00 GBP
