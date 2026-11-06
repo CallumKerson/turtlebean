@@ -1,0 +1,33 @@
+; auto_accounts opens each account no open directive names, on the date it is
+; first used. Uses are postings, balance, pad (both accounts) and close.
+plugin "beancount.plugins.auto_accounts"
+
+2025-01-01 open Assets:Opened
+
+2025-01-05 * "First use in a transaction"
+  Assets:Bank   10 GBP
+  Income:Salary
+
+; Balance checks run after the plugin, so this account is known.
+2025-01-03 balance Assets:BalanceOnly  0 GBP
+
+2025-01-04 pad Assets:Padded Equity:Opening
+
+2025-02-01 balance Assets:Padded  5 GBP
+
+; Custom values don't count as uses.
+2025-01-06 custom "budget" Expenses:Custom "x"
+
+2025-01-07 close Assets:CloseOnly
+
+; An explicit open after first use isn't helped: the use is still an error.
+2025-01-10 * "Before the explicit open"
+  Assets:LateOpen  1 GBP
+  Assets:Bank     -1 GBP
+
+2025-01-20 open Assets:LateOpen
+
+; Parents of a used account aren't opened.
+2025-01-02 * "Deep account"
+  Expenses:Food:Groceries:Fresh  3 GBP
+  Assets:Opened

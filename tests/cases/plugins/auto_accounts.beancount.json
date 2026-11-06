@@ -1,0 +1,329 @@
+{
+  "errors": [
+    {
+      "kind": "ValidationError",
+      "file": "auto_accounts.beancount",
+      "line": 24
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2025-01-01",
+      "file": "auto_accounts.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Opened",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-02",
+      "file": "<auto_accounts>",
+      "line": 7,
+      "meta": {},
+      "account": "Expenses:Food:Groceries:Fresh",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2025-01-02",
+      "file": "auto_accounts.beancount",
+      "line": 31,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Deep account",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food:Groceries:Fresh",
+          "units": {
+            "number": "3",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Opened",
+          "units": {
+            "number": "-3",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-03",
+      "file": "<auto_accounts>",
+      "line": 0,
+      "meta": {},
+      "account": "Assets:BalanceOnly",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Balance",
+      "date": "2025-01-03",
+      "file": "auto_accounts.beancount",
+      "line": 12,
+      "meta": {},
+      "account": "Assets:BalanceOnly",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-04",
+      "file": "<auto_accounts>",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Padded",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-04",
+      "file": "<auto_accounts>",
+      "line": 6,
+      "meta": {},
+      "account": "Equity:Opening",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Pad",
+      "date": "2025-01-04",
+      "file": "auto_accounts.beancount",
+      "line": 14,
+      "meta": {},
+      "account": "Assets:Padded",
+      "source_account": "Equity:Opening"
+    },
+    {
+      "type": "Transaction",
+      "date": "2025-01-04",
+      "file": "auto_accounts.beancount",
+      "line": 14,
+      "meta": {},
+      "flag": "P",
+      "payee": null,
+      "narration": "(Padding inserted for Balance of 5 GBP for difference 5 GBP)",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Padded",
+          "units": {
+            "number": "5",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening",
+          "units": {
+            "number": "-5",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-05",
+      "file": "<auto_accounts>",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Bank",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-05",
+      "file": "<auto_accounts>",
+      "line": 8,
+      "meta": {},
+      "account": "Income:Salary",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2025-01-05",
+      "file": "auto_accounts.beancount",
+      "line": 7,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "First use in a transaction",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Bank",
+          "units": {
+            "number": "10",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Income:Salary",
+          "units": {
+            "number": "-10",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Custom",
+      "date": "2025-01-06",
+      "file": "auto_accounts.beancount",
+      "line": 19,
+      "meta": {},
+      "custom_type": "budget",
+      "values": [
+        {
+          "dtype": "<AccountDummy>",
+          "string": "Expenses:Custom"
+        },
+        {
+          "dtype": "str",
+          "string": "x"
+        }
+      ]
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-07",
+      "file": "<auto_accounts>",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:CloseOnly",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Close",
+      "date": "2025-01-07",
+      "file": "auto_accounts.beancount",
+      "line": 21,
+      "meta": {},
+      "account": "Assets:CloseOnly"
+    },
+    {
+      "type": "Transaction",
+      "date": "2025-01-10",
+      "file": "auto_accounts.beancount",
+      "line": 24,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Before the explicit open",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:LateOpen",
+          "units": {
+            "number": "1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Bank",
+          "units": {
+            "number": "-1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-20",
+      "file": "auto_accounts.beancount",
+      "line": 28,
+      "meta": {},
+      "account": "Assets:LateOpen",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Balance",
+      "date": "2025-02-01",
+      "file": "auto_accounts.beancount",
+      "line": 16,
+      "meta": {},
+      "account": "Assets:Padded",
+      "amount": {
+        "number": "5",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    }
+  ],
+  "balances": {
+    "Assets:Bank": {
+      "GBP": "9"
+    },
+    "Assets:LateOpen": {
+      "GBP": "1"
+    },
+    "Assets:Opened": {
+      "GBP": "-3"
+    },
+    "Assets:Padded": {
+      "GBP": "5"
+    },
+    "Equity:Opening": {
+      "GBP": "-5"
+    },
+    "Expenses:Food:Groceries:Fresh": {
+      "GBP": "3"
+    },
+    "Income:Salary": {
+      "GBP": "-10"
+    }
+  }
+}

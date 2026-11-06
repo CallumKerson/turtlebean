@@ -1,0 +1,128 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2025-01-01",
+      "file": "auto_accounts_order.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:AAA:Unused",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-01",
+      "file": "auto_accounts_order.beancount",
+      "line": 7,
+      "meta": {},
+      "account": "Assets:Zed",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-02",
+      "file": "<auto_accounts>",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Bee",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2025-01-02",
+      "file": "<auto_accounts>",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Mid",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2025-01-02",
+      "file": "auto_accounts_order.beancount",
+      "line": 9,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Mid",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Mid",
+          "units": {
+            "number": "1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Zed",
+          "units": {
+            "number": "-1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2025-01-02",
+      "file": "auto_accounts_order.beancount",
+      "line": 13,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Bee",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Bee",
+          "units": {
+            "number": "1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Zed",
+          "units": {
+            "number": "-1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Bee": {
+      "GBP": "1"
+    },
+    "Assets:Mid": {
+      "GBP": "1"
+    },
+    "Assets:Zed": {
+      "GBP": "-2"
+    }
+  }
+}

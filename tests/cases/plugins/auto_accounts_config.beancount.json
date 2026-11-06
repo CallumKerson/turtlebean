@@ -1,0 +1,65 @@
+{
+  "errors": [
+    {
+      "kind": "LoadError",
+      "file": "<load>",
+      "line": 0
+    },
+    {
+      "kind": "ValidationError",
+      "file": "auto_accounts_config.beancount",
+      "line": 5
+    },
+    {
+      "kind": "ValidationError",
+      "file": "auto_accounts_config.beancount",
+      "line": 5
+    }
+  ],
+  "entries": [
+    {
+      "type": "Transaction",
+      "date": "2025-01-02",
+      "file": "auto_accounts_config.beancount",
+      "line": 5,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Unopened",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Bank",
+          "units": {
+            "number": "1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Income:Gift",
+          "units": {
+            "number": "-1",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Bank": {
+      "GBP": "1"
+    },
+    "Income:Gift": {
+      "GBP": "-1"
+    }
+  }
+}
