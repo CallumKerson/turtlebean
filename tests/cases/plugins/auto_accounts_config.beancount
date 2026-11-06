@@ -1,0 +1,7 @@
+; auto_accounts takes no configuration: given some, it fails and opens
+; nothing.
+plugin "beancount.plugins.auto_accounts" "anything"
+
+2025-01-02 * "Unopened"
+  Assets:Bank  1 GBP
+  Income:Gift

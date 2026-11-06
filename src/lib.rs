@@ -4,7 +4,8 @@
 //!
 //! - [`load_file`] reads a ledger and everything it includes, books it and
 //!   checks it, aiming for the same results and errors as Python beancount.
-//! - [`Loader`] does the same with a chosen set of [`Plugin`]s.
+//! - [`Loader`] does the same with a chosen set of [`Plugin`]s; the built-in
+//!   ones are in [`plugins`].
 //! - [`parse`] and [`write`] turn text into a [`Document`] and back, byte for
 //!   byte.
 //!
@@ -20,6 +21,7 @@ mod model;
 mod number;
 mod parser;
 mod plugin;
+pub mod plugins;
 
 pub use date::Date;
 pub use loader::{Loader, load_file};

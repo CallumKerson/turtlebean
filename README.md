@@ -49,8 +49,10 @@ fn plugin(entries: &mut Vec<turtlebean::Entry>, ctx: &mut turtlebean::PluginCont
 - Entries made while loading, such as padding, have `Origin::Generated`.
   Never write them back to a file.
 
-There are no built-in plugins yet. Each will match Python beancount's
-observed behaviour.
+Built-in plugins, each matching Python beancount's observed behaviour:
+
+- `beancount.plugins.auto_accounts`: opens every account no `open` names, on
+  the date it is first used.
 
 ## Testing
 

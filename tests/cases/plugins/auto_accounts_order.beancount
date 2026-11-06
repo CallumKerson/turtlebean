@@ -1,0 +1,15 @@
+; Generated opens sort among same-day entries by the account's position in
+; the sorted list of every account the ledger names, opened or not.
+plugin "beancount.plugins.auto_accounts"
+plugin "beancount.plugins.auto_accounts"
+
+2025-01-01 open Assets:AAA:Unused
+2025-01-01 open Assets:Zed
+
+2025-01-02 * "Mid"
+  Assets:Mid  1 GBP
+  Assets:Zed
+
+2025-01-02 * "Bee"
+  Assets:Bee  1 GBP
+  Assets:Zed

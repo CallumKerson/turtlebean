@@ -11,6 +11,7 @@ use crate::checks;
 use crate::model::{Booking, Entry, EntryKind, Error, ErrorKind, Ledger, Options, Origin, Source};
 use crate::parser::{Parsed, RawEntry, RawKind, RawTransaction, parse_with_replacements};
 use crate::plugin::{Plugin, PluginContext};
+use crate::plugins;
 
 /// Options beancount accepts that turtlebean doesn't act on.
 const IGNORED_OPTIONS: &[&str] = &[
@@ -51,10 +52,9 @@ type Registered = Vec<(String, Box<dyn Plugin>)>;
 /// Loads ledgers with a chosen set of plugins.
 ///
 /// ```
-/// # fn tidy(_: &mut Vec<turtlebean::Entry>, _: &mut turtlebean::PluginContext<'_>) {}
 /// # fn check(_: &mut Vec<turtlebean::Entry>, _: &mut turtlebean::PluginContext<'_>) {}
 /// let loader = turtlebean::Loader::new()
-///     .plugin("myapp.tidy", tidy)
+///     .plugin("beancount.plugins.auto_accounts", turtlebean::plugins::auto_accounts)
 ///     .always("myapp.check", check);
 /// let ledger = loader.load(std::path::Path::new("main.beancount"));
 /// ```
@@ -73,10 +73,9 @@ impl Loader {
     }
 
     /// A loader with every built-in plugin, under beancount's module names.
-    /// There are none yet.
     #[must_use]
     pub fn standard() -> Loader {
-        Loader::new()
+        Loader::new().plugin("beancount.plugins.auto_accounts", plugins::auto_accounts)
     }
 
     /// Registers a plugin to run when a ledger declares it with
