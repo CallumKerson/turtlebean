@@ -43,6 +43,13 @@ run = "hk fix --all --no-fail-fast"
 description = "Fix issues in files changed since main"
 run = ["git fetch origin main", "hk fix --from-ref origin/main --to-ref HEAD --no-fail-fast"]
 
+[tasks.msrv]
+description = "Run the tests with the minimum supported Rust version"
+# Must match rust-version in Cargo.toml. Renovate leaves this one alone, and
+# cargo refuses to build if Cargo.toml asks for a newer Rust than this.
+tools = { rust = { version = "1.99.0", profile = "minimal" } }
+run = "cargo nextest run --no-tests=warn"
+
 [tasks.setup]
 description = "Install the git hooks"
 run = "hk install"
