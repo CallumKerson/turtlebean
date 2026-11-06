@@ -6,6 +6,8 @@
 //!   checks it, aiming for the same results and errors as Python beancount.
 //! - [`Loader`] does the same with a chosen set of [`Plugin`]s; the built-in
 //!   ones are in [`plugins`].
+//! - [`format::entry`] writes a directive as text, and [`format::align`] lines
+//!   up a file's amounts.
 //! - [`parse`] and [`write`] turn text into a [`Document`] and back, byte for
 //!   byte.
 //!
@@ -15,6 +17,7 @@
 mod booking;
 mod checks;
 mod date;
+pub mod format;
 mod lexer;
 mod loader;
 mod model;
