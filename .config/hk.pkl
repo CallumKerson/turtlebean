@@ -1,0 +1,70 @@
+amends "package://github.com/jdx/hk/releases/download/v2.7.0/hk@2.7.0#/Config.pkl"
+
+import "package://github.com/jdx/hk/releases/download/v2.7.0/hk@2.7.0#/Builtins.pkl"
+
+min_hk_version = "2.7.0"
+
+// mise lock writes .config/mise/locks
+exclude = List(".config/mise/locks/**", "CHANGELOG.md", "LICENSE")
+
+local linters = new Mapping<String, Step> {
+  ["byte_order_marker"] = Builtins.byte_order_marker
+  ["cargo_clippy"] = (Builtins.cargo_clippy) {
+    check =
+      "cargo clippy --manifest-path {{workspace_indicator}} --all-targets --quiet -- -D warnings"
+  }
+  ["cargo_deny"] = Builtins.cargo_deny
+  ["cargo_fmt"] = Builtins.cargo_fmt
+  ["cargo_shear"] {
+    glob = List("**/Cargo.toml", "**/*.rs")
+    check = "cargo shear"
+    fix = "cargo shear --fix"
+  }
+  ["check_added_large_files"] = Builtins.check_added_large_files
+  ["check_case_conflict"] = Builtins.check_case_conflict
+  ["check_executables_have_shebangs"] = Builtins.check_executables_have_shebangs
+  ["check_merge_conflict"] = Builtins.check_merge_conflict
+  ["check_symlinks"] = Builtins.check_symlinks
+  ["detect_private_key"] = Builtins.detect_private_key
+  ["fix_smart_quotes"] = Builtins.fix_smart_quotes
+  ["jactionlint"] = Builtins.jactionlint
+  // Other file types have their own linters
+  ["json"] = (Builtins.oxfmt) {
+    glob = List("**/*.json", "**/*.jsonc")
+  }
+  ["mixed_line_ending"] = Builtins.mixed_line_ending
+  ["newlines"] = Builtins.newlines
+  ["pkl"] = Builtins.pkl
+  ["pkl_format"] = Builtins.pkl_format
+  ["rumdl"] = Builtins.rumdl
+  ["toml"] = Builtins.tombi
+  ["toml_format"] = Builtins.tombi_format
+  ["trailing_whitespace"] = Builtins.trailing_whitespace
+  ["typos"] = Builtins.typos
+  ["yaml"] = Builtins.ryl
+}
+
+local commit_message_check = new Mapping<String, Step> {
+  ["check_conventional_commit"] = Builtins.check_conventional_commit
+  ["typos"] {
+    check = "typos {{commit_msg_file}}"
+  }
+}
+
+hooks {
+  ["pre-commit"] {
+    fix = true
+    stash = "git"
+    steps = linters
+  }
+  ["commit-msg"] {
+    steps = commit_message_check
+  }
+  ["fix"] {
+    fix = true
+    steps = linters
+  }
+  ["check"] {
+    steps = linters
+  }
+}
