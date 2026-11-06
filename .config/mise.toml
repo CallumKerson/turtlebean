@@ -43,6 +43,14 @@ run = "hk fix --all --no-fail-fast"
 description = "Fix issues in files changed since main"
 run = ["git fetch origin main", "hk fix --from-ref origin/main --to-ref HEAD --no-fail-fast"]
 
+[tasks.msrv]
+description = "Run the tests with the minimum Rust version declared in Cargo.toml"
+run = '''
+version=$(sed -n 's/^rust-version = "\(.*\)"$/\1/p' Cargo.toml)
+rustup toolchain install "$version" --profile minimal --no-self-update
+cargo "+$version" nextest run --no-tests=warn
+'''
+
 [tasks.setup]
 description = "Install the git hooks"
 run = "hk install"
