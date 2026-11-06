@@ -4,6 +4,7 @@
 //!
 //! - [`load_file`] reads a ledger and everything it includes, books it and
 //!   checks it, aiming for the same results and errors as Python beancount.
+//! - [`Loader`] does the same with a chosen set of [`Plugin`]s.
 //! - [`parse`] and [`write`] turn text into a [`Document`] and back, byte for
 //!   byte.
 //!
@@ -18,12 +19,14 @@ mod loader;
 mod model;
 mod number;
 mod parser;
+mod plugin;
 
 pub use date::Date;
-pub use loader::load_file;
+pub use loader::{Loader, load_file};
 pub use model::{
     Amount, Booking, Cost, CustomType, CustomValue, Entry, EntryKind, Error, ErrorKind, Ledger,
-    Meta, MetaValue, Options, Posting, Source, Transaction,
+    Meta, MetaValue, Options, Origin, Posting, Source, Transaction,
 };
 pub use parser::{Document, parse, write};
+pub use plugin::{Plugin, PluginContext};
 pub use rust_decimal::{Decimal, RoundingStrategy};

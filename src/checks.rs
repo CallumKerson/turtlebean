@@ -8,7 +8,7 @@ use rust_decimal::Decimal;
 use crate::booking::default_tolerance;
 use crate::date::Date;
 use crate::model::{
-    Amount, Entry, EntryKind, Error, ErrorKind, Options, Posting, Source, Transaction,
+    Amount, Entry, EntryKind, Error, ErrorKind, Options, Origin, Posting, Source, Transaction,
 };
 use crate::number;
 
@@ -183,6 +183,7 @@ fn padding(pad: &Entry, amount: &Amount, difference: Decimal) -> Entry {
         date: pad.date,
         source: pad.source.clone(),
         meta: Vec::new(),
+        origin: Origin::Generated("pad".to_owned()),
         kind: EntryKind::Transaction(Transaction {
             flag: 'P',
             payee: None,

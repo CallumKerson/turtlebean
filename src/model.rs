@@ -228,17 +228,55 @@ impl EntryKind {
     }
 }
 
+impl EntryKind {
+    /// The accounts the directive names, in the order written: the account
+    /// of an `open`, `close` or `balance`, both accounts of a `pad`, and each
+    /// posting's account. Other directives name none.
+    #[must_use]
+    pub fn accounts(&self) -> Vec<&str> {
+        match self {
+            EntryKind::Open { account, .. }
+            | EntryKind::Close { account }
+            | EntryKind::Balance { account, .. } => vec![account],
+            EntryKind::Pad {
+                account,
+                source_account,
+            } => vec![account, source_account],
+            EntryKind::Transaction(txn) => {
+                txn.postings.iter().map(|p| p.account.as_str()).collect()
+            }
+            EntryKind::Commodity { .. } | EntryKind::Price { .. } | EntryKind::Custom { .. } => {
+                Vec::new()
+            }
+        }
+    }
+}
+
+/// Whether an entry was written in a ledger file or made while loading it.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum Origin {
+    /// A directive in a file.
+    Written,
+    /// Made while loading, by what the name says: `pad` for padding
+    /// transactions, or a plugin's registered name. Never write these back to
+    /// a file.
+    Generated(String),
+}
+
 /// A dated directive.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Entry {
     /// The directive's date.
     pub date: Date,
-    /// Where it was written.
+    /// Where it was written, or for a generated entry, what beancount
+    /// reports for it (such as file `<auto_accounts>`).
     pub source: Source,
     /// Its metadata.
     pub meta: Meta,
     /// What it is.
     pub kind: EntryKind,
+    /// Whether it was written or generated.
+    pub origin: Origin,
 }
 
 /// The kinds of error, named as Python beancount names them.
@@ -316,8 +354,10 @@ pub struct Options {
     pub tolerance_multiplier: Decimal,
     /// The default booking method.
     pub booking: Booking,
-    /// `plugin` directives: module name and optional configuration.
-    /// turtlebean records them but doesn't run them.
+    /// `plugin` directives in the order declared: module name and optional
+    /// configuration. Only plugins registered with the [`Loader`] run.
+    ///
+    /// [`Loader`]: crate::Loader
     pub plugins: Vec<(String, Option<String>)>,
 }
 
