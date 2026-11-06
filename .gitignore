@@ -1,0 +1,4 @@
+/target/
+.DS_Store
+# Compatibility corpora are fetched at test time and never committed
+/tests/corpus/

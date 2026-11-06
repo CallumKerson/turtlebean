@@ -1,0 +1,101 @@
+[settings]
+experimental = true
+lockfile = true
+
+[settings.task]
+show_full_cmd = true
+
+[tasks.check]
+description = "Run all linter and formatter checks with hk against changed files"
+run = "hk check --no-fail-fast"
+
+[tasks.check-all]
+description = "Run all linter and formatter checks with hk against all files"
+run = "hk check --all --no-fail-fast"
+
+[tasks.check-auto]
+description = "Check all files on main, or only changed files on other branches"
+run = '''
+if [ "$(git branch --show-current)" = "main" ]; then
+  mise run check-all
+else
+  mise run check-pr
+fi
+'''
+
+[tasks.check-pr]
+description = "Run all checks against files changed since main"
+run = ["git fetch origin main", "hk check --from-ref origin/main --to-ref HEAD --no-fail-fast"]
+
+[tasks.ci]
+description = "Run the checks and tests CI runs"
+depends = ["check-auto", "test"]
+
+[tasks.fix]
+description = "Fix all linter and formatter issues with hk against changed files"
+run = "hk fix --no-fail-fast"
+
+[tasks.fix-all]
+description = "Fix all linter and formatter issues with hk against all files"
+run = "hk fix --all --no-fail-fast"
+
+[tasks.fix-pr]
+description = "Fix issues in files changed since main"
+run = ["git fetch origin main", "hk fix --from-ref origin/main --to-ref HEAD --no-fail-fast"]
+
+[tasks.setup]
+description = "Install the git hooks"
+run = "hk install"
+
+[tasks.test]
+description = "Run the tests"
+sources = ["Cargo.toml", "Cargo.lock", "src/**/*.rs", "tests/**/*"]
+run = "cargo nextest run --no-tests=warn"
+
+[tools."aqua:owenlamont/ryl"]
+version = "0.25.1"
+
+[tools.aube]
+version = "2.7.2"
+
+[tools.cargo-binstall]
+version = "1.26.0"
+
+[tools.cargo-deny]
+version = "0.20.2"
+
+[tools."cargo:cargo-nextest"]
+version = "0.9.148"
+
+[tools."cargo:cargo-shear"]
+version = "1.14.0"
+
+[tools.hk]
+version = "2.7.0"
+
+[tools.jactionlint]
+version = "2.3.0"
+
+[tools.oxfmt]
+version = "0.73.0"
+depends = ["aube"]
+
+[tools.pkl]
+version = "0.32.1"
+
+[tools.rumdl]
+version = "0.3.0"
+
+[tools.rust]
+version = "1.99"
+components = "clippy,rustfmt,rust-analyzer"
+profile = "minimal"
+
+[tools.shellcheck]
+version = "0.11.0"
+
+[tools.tombi]
+version = "1.8.7"
+
+[tools.typos]
+version = "1.51.1"

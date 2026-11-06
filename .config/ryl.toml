@@ -1,0 +1,32 @@
+[files]
+yaml = [
+  "*.yaml",
+  "*.yml",
+]
+
+[lint.rules]
+anchors = "enable"
+braces = "enable"
+brackets = "enable"
+colons = "enable"
+commas = "enable"
+empty-lines = "enable"
+hyphens = "enable"
+indentation = "enable"
+key-duplicates = "enable"
+new-line-at-end-of-file = "enable"
+new-lines = "enable"
+trailing-spaces = "enable"
+
+[lint.rules.comments]
+level = "warning"
+
+[lint.rules.comments-indentation]
+level = "warning"
+
+[lint.rules.line-length]
+max = 120
+
+[lint.rules.truthy]
+check-keys = false
+level = "warning"

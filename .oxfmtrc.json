@@ -1,0 +1,4 @@
+{
+  "ignorePatterns": ["CHANGELOG.md", "LICENSE", "**/*.toml"],
+  "printWidth": 120
+}

@@ -1,0 +1,11 @@
+# tombi only sorts when mise's schema is set explicitly. Sorting puts the long
+# [tools] table last.
+[[schemas]]
+path = "https://mise.jdx.dev/schema/mise.json"
+include = [".config/mise.toml"]
+
+[[schemas.overrides]]
+targets = ["", "tasks", "tools"]
+
+[schemas.overrides.format.rules]
+table-keys-order = "ascending"

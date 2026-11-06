@@ -1,0 +1,18 @@
+[graph]
+all-features = false
+
+[advisories]
+yanked = "deny"
+
+[licenses]
+# Dependencies must stay compatible with turtlebean's MIT licence
+allow = ["Apache-2.0", "MIT", "Unicode-3.0"]
+confidence-threshold = 0.9
+
+[bans]
+multiple-versions = "warn"
+wildcards = "deny"
+
+[sources]
+unknown-git = "deny"
+unknown-registry = "deny"
