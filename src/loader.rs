@@ -1,5 +1,5 @@
 //! Loads a ledger from disk: follows includes, applies options, sorts
-//! entries, then books and checks them.
+//! entries, books them, runs plugins, then checks them.
 
 use std::collections::{HashMap, HashSet};
 use std::path::{Path, PathBuf};
@@ -8,8 +8,9 @@ use rust_decimal::Decimal;
 
 use crate::booking::{self, Context, Inventory, Outcome};
 use crate::checks;
-use crate::model::{Booking, Entry, EntryKind, Error, ErrorKind, Ledger, Options, Source};
+use crate::model::{Booking, Entry, EntryKind, Error, ErrorKind, Ledger, Options, Origin, Source};
 use crate::parser::{Parsed, RawEntry, RawKind, RawTransaction, parse_with_replacements};
+use crate::plugin::{Plugin, PluginContext};
 
 /// Options beancount accepts that turtlebean doesn't act on.
 const IGNORED_OPTIONS: &[&str] = &[
@@ -37,9 +38,76 @@ struct Loaded {
     accounts: Vec<(String, Source)>,
 }
 
-/// Loads a ledger file and everything it includes.
+/// Loads a ledger file and everything it includes, running the built-in
+/// plugins it declares, as Python beancount's `load_file` does. The same as
+/// `Loader::standard().load(path)`.
 #[must_use]
 pub fn load_file(path: &Path) -> Ledger {
+    Loader::standard().load(path)
+}
+
+type Registered = Vec<(String, Box<dyn Plugin>)>;
+
+/// Loads ledgers with a chosen set of plugins.
+///
+/// ```
+/// # fn tidy(_: &mut Vec<turtlebean::Entry>, _: &mut turtlebean::PluginContext<'_>) {}
+/// # fn check(_: &mut Vec<turtlebean::Entry>, _: &mut turtlebean::PluginContext<'_>) {}
+/// let loader = turtlebean::Loader::new()
+///     .plugin("myapp.tidy", tidy)
+///     .always("myapp.check", check);
+/// let ledger = loader.load(std::path::Path::new("main.beancount"));
+/// ```
+#[derive(Default)]
+pub struct Loader {
+    declared: Registered,
+    always: Registered,
+}
+
+impl Loader {
+    /// A loader with no plugins. A ledger that declares any gets an
+    /// [`ErrorKind::Unsupported`] error for each.
+    #[must_use]
+    pub fn new() -> Loader {
+        Loader::default()
+    }
+
+    /// A loader with every built-in plugin, under beancount's module names.
+    /// There are none yet.
+    #[must_use]
+    pub fn standard() -> Loader {
+        Loader::new()
+    }
+
+    /// Registers a plugin to run when a ledger declares it with
+    /// `plugin "name"`: in the order declared, once per declaration, with
+    /// that directive's configuration. A later registration under the same
+    /// name replaces an earlier one.
+    #[must_use]
+    pub fn plugin(mut self, name: impl Into<String>, plugin: impl Plugin + 'static) -> Loader {
+        let name = name.into();
+        self.declared.retain(|(n, _)| *n != name);
+        self.declared.push((name, Box::new(plugin)));
+        self
+    }
+
+    /// Adds a plugin that runs on every ledger, whatever it declares, after
+    /// the declared ones and in the order added.
+    #[must_use]
+    pub fn always(mut self, name: impl Into<String>, plugin: impl Plugin + 'static) -> Loader {
+        self.always.push((name.into(), Box::new(plugin)));
+        self
+    }
+
+    /// Loads a ledger file and everything it includes, then books it, runs
+    /// the plugins and checks it.
+    #[must_use]
+    pub fn load(&self, path: &Path) -> Ledger {
+        load(path, self)
+    }
+}
+
+fn load(path: &Path, plugins: &Loader) -> Ledger {
     let mut loaded = Loaded {
         entries: Vec::new(),
         errors: Vec::new(),
@@ -53,7 +121,7 @@ pub fn load_file(path: &Path) -> Ledger {
     let mut visited = HashSet::new();
     let path = path.canonicalize().unwrap_or_else(|_| path.to_path_buf());
     load_recursive(&path, &mut loaded, &mut visited);
-    finish(loaded)
+    finish(loaded, plugins)
 }
 
 fn load_recursive(path: &Path, loaded: &mut Loaded, visited: &mut HashSet<PathBuf>) {
@@ -206,6 +274,60 @@ fn type_order(kind: &RawKind) -> i8 {
     }
 }
 
+/// [`type_order`] for booked entries.
+fn kind_order(kind: &EntryKind) -> i8 {
+    match kind {
+        EntryKind::Open { .. } => -2,
+        EntryKind::Balance { .. } => -1,
+        EntryKind::Close { .. } => 2,
+        _ => 0,
+    }
+}
+
+/// Runs the declared plugins that are registered, then the ones that always
+/// run, and sorts the result as the entries were sorted before booking.
+fn run_plugins(
+    mut entries: Vec<Entry>,
+    options: &Options,
+    registered: &Loader,
+    errors: &mut Vec<Error>,
+) -> Vec<Entry> {
+    let declared = options.plugins.iter().map(|(name, config)| {
+        let plugin = registered.declared.iter().find(|(n, _)| n == name);
+        (name.as_str(), config.as_deref(), plugin.map(|(_, p)| p))
+    });
+    let always = registered
+        .always
+        .iter()
+        .map(|(name, p)| (name.as_str(), None, Some(p)));
+    let mut ran = false;
+    for (name, config, plugin) in declared.chain(always) {
+        let Some(plugin) = plugin else {
+            errors.push(Error {
+                kind: ErrorKind::Unsupported,
+                source: None,
+                message: format!(
+                    "turtlebean doesn't run plugin \"{name}\", so its changes are missing"
+                ),
+            });
+            continue;
+        };
+        let mut ctx = PluginContext {
+            name,
+            config,
+            options,
+            errors,
+        };
+        plugin.run(&mut entries, &mut ctx);
+        ran = true;
+    }
+    if ran {
+        // Stable, so entries that tie keep their order.
+        entries.sort_by_key(|e| (e.date, kind_order(&e.kind), e.source.line));
+    }
+    entries
+}
+
 /// Reports accounts whose root isn't one of the five root names.
 fn check_roots(accounts: &[(String, Source)], roots: &[String; 5], errors: &mut Vec<Error>) {
     for (account, source) in accounts {
@@ -258,7 +380,7 @@ fn book_transaction(
     }
 }
 
-fn finish(loaded: Loaded) -> Ledger {
+fn finish(loaded: Loaded, plugins: &Loader) -> Ledger {
     let Loaded {
         mut entries,
         mut errors,
@@ -335,9 +457,11 @@ fn finish(loaded: Loaded) -> Ledger {
             source,
             meta: raw.meta,
             kind,
+            origin: Origin::Written,
         });
     }
 
+    let booked = run_plugins(booked, &options, plugins, &mut errors);
     let entries = checks::pad_and_balance(booked, &options, &mut errors);
     checks::validate(&entries, &mut errors);
     Ledger {

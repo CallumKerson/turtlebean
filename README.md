@@ -27,8 +27,30 @@ The first target is the subset a real personal ledger uses:
 - Semantics: filling in an elided posting, tolerance inference, `balance` and
   `pad` checks, and booking for cost lots.
 
-Plugins, the query language and other booking methods are out of scope for
-now.
+The query language and other booking methods are out of scope for now.
+
+## Plugins
+
+Plugins change or check a ledger's entries while it loads, after booking and
+before the `balance` checks and validation, where Python beancount runs its
+own. A plugin is any function with this shape:
+
+```rust
+fn plugin(entries: &mut Vec<turtlebean::Entry>, ctx: &mut turtlebean::PluginContext<'_>)
+```
+
+- `load_file` runs the built-in plugins a ledger declares with
+  `plugin "name"`, under beancount's module names.
+- `Loader` chooses the plugins: `.plugin(name, f)` runs `f` when a ledger
+  declares `name`, with the directive's configuration; `.always(name, f)` runs
+  `f` on every ledger.
+- A declared plugin that isn't registered is reported as an `Unsupported`
+  error, as its changes are missing.
+- Entries made while loading, such as padding, have `Origin::Generated`.
+  Never write them back to a file.
+
+There are no built-in plugins yet. Each will match Python beancount's
+observed behaviour.
 
 ## Testing
 
