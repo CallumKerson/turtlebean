@@ -54,6 +54,13 @@ Built-in plugins, each matching Python beancount's observed behaviour:
 - `beancount.plugins.auto_accounts`: opens every account no `open` names, on
   the date it is first used.
 
+## Formatting
+
+`format::entry` writes a directive as text that loads back to the same
+directive, and `format::align` lines up the amounts in a file the way
+`bean-format` does: numbers right-aligned in one column, as wide as the
+widest number and two spaces after the longest account.
+
 ## Testing
 
 turtlebean's results are compared with Python beancount (`bean-check` and
