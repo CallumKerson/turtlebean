@@ -1,0 +1,8 @@
+option "inferred_tolerance_default" "GBP:0.01"
+
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Integers use the default"
+  Expenses:Food   10 GBP
+  Assets:Cash    -9.99 GBP

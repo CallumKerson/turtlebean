@@ -1,0 +1,32 @@
+{
+  "errors": [
+    {
+      "kind": "LexerError",
+      "file": "unterminated_string.beancount",
+      "line": 4
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unterminated_string.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unterminated_string.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Food",
+      "currencies": null,
+      "booking": null
+    }
+  ],
+  "balances": {}
+}

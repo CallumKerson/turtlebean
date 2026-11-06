@@ -1,0 +1,22 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Misc
+
+2024-01-02 * "Addition and multiplication"
+  Expenses:Misc   (1.50 + 2) * 3 GBP
+  Assets:Cash
+
+2024-01-03 * "Division"
+  Expenses:Misc   10 / 3 GBP
+  Assets:Cash
+
+2024-01-04 * "Negation and subtraction"
+  Expenses:Misc   -(2 - 5.25) GBP
+  Assets:Cash
+
+2024-01-05 * "Precedence"
+  Expenses:Misc   1 + 2 * 3 - 4 / 2 GBP
+  Assets:Cash
+
+2024-01-06 * "Without spaces"
+  Expenses:Misc   2*3.10 GBP
+  Assets:Cash

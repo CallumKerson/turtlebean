@@ -1,0 +1,123 @@
+{
+  "errors": [
+    {
+      "kind": "ValidationError",
+      "file": "unbalanced.beancount",
+      "line": 4
+    },
+    {
+      "kind": "CategorizationError",
+      "file": "unbalanced.beancount",
+      "line": 10
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unbalanced.beancount",
+      "line": 12
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unbalanced.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unbalanced.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Food",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "unbalanced.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Does not balance",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-9.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "unbalanced.beancount",
+      "line": 12,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "A single posting",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-05",
+      "file": "unbalanced.beancount",
+      "line": 15,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "No postings",
+      "tags": [],
+      "links": [],
+      "postings": []
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-9.00"
+    },
+    "Expenses:Food": {
+      "GBP": "11.00"
+    }
+  }
+}

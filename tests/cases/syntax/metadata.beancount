@@ -1,0 +1,22 @@
+2024-01-01 open Assets:Cash
+  opened-by: "Callum"
+2024-01-01 open Expenses:Misc
+
+2024-01-02 * "Metadata of every type"
+  string: "text"
+  number: 42.50
+  negative: -3
+  date: 2023-12-31
+  bool-true: TRUE
+  bool-false: FALSE
+  amount: 10.00 GBP
+  account: Assets:Cash
+  currency: GBP
+  tag: #sometag
+  empty:
+  camelCase: "yes"
+  under_score9: "yes"
+  Expenses:Misc   1.00 GBP
+    posting-meta: "on the posting"
+    count: 3
+  Assets:Cash

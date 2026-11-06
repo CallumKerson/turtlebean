@@ -1,0 +1,7 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Already balanced, one posting elided"
+  Expenses:Food   5.00 GBP
+  Assets:Cash    -5.00 GBP
+  Expenses:Food

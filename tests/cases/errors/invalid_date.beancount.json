@@ -1,0 +1,16 @@
+{
+  "errors": [
+    {
+      "kind": "LexerError",
+      "file": "invalid_date.beancount",
+      "line": 2
+    },
+    {
+      "kind": "LexerError",
+      "file": "invalid_date.beancount",
+      "line": 3
+    }
+  ],
+  "entries": [],
+  "balances": {}
+}

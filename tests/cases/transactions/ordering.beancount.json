@@ -1,0 +1,156 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "ordering.beancount",
+      "line": 13,
+      "meta": {},
+      "account": "Expenses:Unused",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "ordering.beancount",
+      "line": 14,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "ordering.beancount",
+      "line": 15,
+      "meta": {},
+      "account": "Expenses:Food",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "ordering.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "ordering.beancount",
+      "line": 7,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Same date as a balance and a close",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "2.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-2.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Price",
+      "date": "2024-01-02",
+      "file": "ordering.beancount",
+      "line": 10,
+      "meta": {},
+      "currency": "VAFTGAG",
+      "amount": {
+        "number": "10",
+        "currency": "GBP"
+      }
+    },
+    {
+      "type": "Commodity",
+      "date": "2024-01-02",
+      "file": "ordering.beancount",
+      "line": 11,
+      "meta": {},
+      "currency": "VAFTGAG"
+    },
+    {
+      "type": "Close",
+      "date": "2024-01-02",
+      "file": "ordering.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Expenses:Unused"
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "ordering.beancount",
+      "line": 1,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Written first, dated later",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-3.00"
+    },
+    "Expenses:Food": {
+      "GBP": "3.00"
+    }
+  }
+}

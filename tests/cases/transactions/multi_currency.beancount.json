@@ -1,0 +1,183 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "multi_currency.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:GBP",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "multi_currency.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:EUR",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "multi_currency.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Expenses:Travel",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "multi_currency.beancount",
+      "line": 5,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Exchange with a price",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:EUR",
+          "units": {
+            "number": "100.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": {
+            "number": "0.85",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:GBP",
+          "units": {
+            "number": "-85.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "multi_currency.beancount",
+      "line": 9,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Exchange with a total price",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:EUR",
+          "units": {
+            "number": "100.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": {
+            "number": "0.86",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:GBP",
+          "units": {
+            "number": "-86.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "multi_currency.beancount",
+      "line": 13,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Two currencies, each balanced",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Travel",
+          "units": {
+            "number": "10.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:EUR",
+          "units": {
+            "number": "-10.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Expenses:Travel",
+          "units": {
+            "number": "5.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:GBP",
+          "units": {
+            "number": "-5.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:EUR": {
+      "EUR": "190.00"
+    },
+    "Assets:GBP": {
+      "GBP": "-176.00"
+    },
+    "Expenses:Travel": {
+      "EUR": "10.00",
+      "GBP": "5.00"
+    }
+  }
+}

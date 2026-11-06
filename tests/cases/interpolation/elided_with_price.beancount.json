@@ -1,0 +1,111 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "elided_with_price.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:GBP",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "elided_with_price.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:EUR",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "elided_with_price.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Weight from a price",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:EUR",
+          "units": {
+            "number": "100.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": {
+            "number": "0.8512",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:GBP",
+          "units": {
+            "number": "-85.120000",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "elided_with_price.beancount",
+      "line": 8,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Weight from a total price",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:EUR",
+          "units": {
+            "number": "100.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": {
+            "number": "0.85129",
+            "currency": "GBP"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:GBP",
+          "units": {
+            "number": "-85.1290000",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:EUR": {
+      "EUR": "200.00"
+    },
+    "Assets:GBP": {
+      "GBP": "-170.2490000"
+    }
+  }
+}

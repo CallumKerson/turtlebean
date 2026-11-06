@@ -1,0 +1,12 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+2024-01-01 open Income:Salary
+
+2024-01-02 * "Employer" "Pay"
+  Assets:Cash        1000.00 GBP
+  Income:Salary     -1000.00 GBP
+
+2024-01-03 * "Split"
+  Expenses:Food        10.00 GBP
+  Expenses:Food         5.25 GBP
+  Assets:Cash         -15.25 GBP

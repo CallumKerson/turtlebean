@@ -1,0 +1,22 @@
+{
+  "errors": [
+    {
+      "kind": "LexerError",
+      "file": "invalid_utf8.beancount",
+      "line": 3
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "invalid_utf8.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Bank",
+      "currencies": null,
+      "booking": null
+    }
+  ],
+  "balances": {}
+}

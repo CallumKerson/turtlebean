@@ -2,5 +2,28 @@
 //! [beancount](https://beancount.github.io/docs/) plain-text accounting
 //! format.
 //!
-//! turtlebean is at an early stage and has no public API yet. See the README
-//! for the supported subset and the plan.
+//! - [`load_file`] reads a ledger and everything it includes, books it and
+//!   checks it, aiming for the same results and errors as Python beancount.
+//! - [`parse`] and [`write`] turn text into a [`Document`] and back, byte for
+//!   byte.
+//!
+//! Syntax outside the supported subset (see the README) is reported as an
+//! [`ErrorKind::Unsupported`] error rather than guessed at.
+
+mod booking;
+mod checks;
+mod date;
+mod lexer;
+mod loader;
+mod model;
+mod number;
+mod parser;
+
+pub use date::Date;
+pub use loader::load_file;
+pub use model::{
+    Amount, Booking, Cost, CustomType, CustomValue, Entry, EntryKind, Error, ErrorKind, Ledger,
+    Meta, MetaValue, Options, Posting, Source, Transaction,
+};
+pub use parser::{Document, parse, write};
+pub use rust_decimal::{Decimal, RoundingStrategy};

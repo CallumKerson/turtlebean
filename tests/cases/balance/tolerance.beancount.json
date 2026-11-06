@@ -1,0 +1,219 @@
+{
+  "errors": [
+    {
+      "kind": "BalanceError",
+      "file": "tolerance.beancount",
+      "line": 10
+    },
+    {
+      "kind": "ValidationError",
+      "file": "tolerance.beancount",
+      "line": 11
+    },
+    {
+      "kind": "BalanceError",
+      "file": "tolerance.beancount",
+      "line": 12
+    },
+    {
+      "kind": "ValidationError",
+      "file": "tolerance.beancount",
+      "line": 12
+    },
+    {
+      "kind": "BalanceError",
+      "file": "tolerance.beancount",
+      "line": 13
+    },
+    {
+      "kind": "ValidationError",
+      "file": "tolerance.beancount",
+      "line": 13
+    },
+    {
+      "kind": "ValidationError",
+      "file": "tolerance.beancount",
+      "line": 14
+    },
+    {
+      "kind": "BalanceError",
+      "file": "tolerance.beancount",
+      "line": 15
+    },
+    {
+      "kind": "ValidationError",
+      "file": "tolerance.beancount",
+      "line": 15
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "tolerance.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "tolerance.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Income:Salary",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "tolerance.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Pay",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "100.004",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Income:Salary",
+          "units": {
+            "number": "-100.004",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 8,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "100.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 9,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "100.0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 10,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "100",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 11,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "100.01",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 12,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "100.015",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 13,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "100.02",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 14,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "99.00",
+        "currency": "GBP"
+      },
+      "tolerance": "1.01"
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "tolerance.beancount",
+      "line": 15,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "99.00",
+        "currency": "GBP"
+      },
+      "tolerance": "0.99"
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "100.004"
+    },
+    "Income:Salary": {
+      "GBP": "-100.004"
+    }
+  }
+}

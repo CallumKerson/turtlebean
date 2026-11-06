@@ -1,0 +1,12 @@
+2024-01-01 open Assets:Bank
+2024-01-01 open Assets:Bank:Current
+2024-01-01 open Assets:Bank:Savings
+2024-01-01 open Income:Salary
+
+2024-01-02 * "Pay"
+  Assets:Bank:Current   60.00 GBP
+  Assets:Bank:Savings   40.00 GBP
+  Income:Salary
+
+2024-01-03 balance Assets:Bank   100.00 GBP
+2024-01-03 balance Assets:Bank:Current   60.00 GBP

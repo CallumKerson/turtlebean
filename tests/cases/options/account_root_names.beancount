@@ -1,0 +1,10 @@
+option "name_assets" "Aktiva"
+option "name_expenses" "Ausgaben"
+
+2024-01-01 open Aktiva:Bank
+2024-01-01 open Ausgaben:Essen
+2024-01-01 open Assets:Old
+
+2024-01-02 * "Renamed roots"
+  Ausgaben:Essen   10.00 EUR
+  Aktiva:Bank

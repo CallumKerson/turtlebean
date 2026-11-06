@@ -1,0 +1,10 @@
+2024-01-01 open Assets:GBP
+2024-01-01 open Assets:EUR
+
+2024-01-02 * "Weight from a price"
+  Assets:EUR    100.00 EUR @ 0.8512 GBP
+  Assets:GBP
+
+2024-01-03 * "Weight from a total price"
+  Assets:EUR    100.00 EUR @@ 85.129 GBP
+  Assets:GBP

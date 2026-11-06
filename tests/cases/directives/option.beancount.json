@@ -1,0 +1,16 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "option.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    }
+  ],
+  "balances": {}
+}

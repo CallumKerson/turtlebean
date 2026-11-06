@@ -1,0 +1,166 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "negative_zero.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Shares",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "negative_zero.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "negative_zero.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Income:Gains",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "negative_zero.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Expenses:Fees",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "negative_zero.beancount",
+      "line": 6,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Shares",
+          "units": {
+            "number": "1",
+            "currency": "ABC"
+          },
+          "cost": {
+            "number": "39.37",
+            "currency": "USD",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-39.37",
+            "currency": "USD"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "negative_zero.beancount",
+      "line": 10,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Sell a fraction at cost; the gain rounds to -0.00",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Shares",
+          "units": {
+            "number": "-0.04241",
+            "currency": "ABC"
+          },
+          "cost": {
+            "number": "39.37",
+            "currency": "USD",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": {
+            "number": "39.37",
+            "currency": "USD"
+          },
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Income:Gains",
+          "units": {
+            "number": "1.67",
+            "currency": "USD"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Expenses:Fees",
+          "units": {
+            "number": "1.67",
+            "currency": "USD"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.67",
+            "currency": "USD"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "USD": "-41.04"
+    },
+    "Assets:Shares": {
+      "ABC": "0.95759"
+    },
+    "Expenses:Fees": {
+      "USD": "1.67"
+    },
+    "Income:Gains": {
+      "USD": "1.67"
+    }
+  }
+}

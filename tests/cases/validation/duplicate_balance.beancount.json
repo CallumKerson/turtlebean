@@ -1,0 +1,79 @@
+{
+  "errors": [
+    {
+      "kind": "BalanceError",
+      "file": "duplicate_balance.beancount",
+      "line": 6
+    },
+    {
+      "kind": "ValidationError",
+      "file": "duplicate_balance.beancount",
+      "line": 6
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "duplicate_balance.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "duplicate_balance.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "duplicate_balance.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "duplicate_balance.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "duplicate_balance.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "1",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    }
+  ],
+  "balances": {}
+}

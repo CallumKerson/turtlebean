@@ -1,0 +1,100 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "commodity_units.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Holdings",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "commodity_units.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "commodity_units.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "29.23",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "192.11",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-5615.3753",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "commodity_units.beancount",
+      "line": 8,
+      "meta": {},
+      "account": "Assets:Holdings",
+      "amount": {
+        "number": "29.23",
+        "currency": "VAFTGAG"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "commodity_units.beancount",
+      "line": 9,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "-5615.3753",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-5615.3753"
+    },
+    "Assets:Holdings": {
+      "VAFTGAG": "29.23"
+    }
+  }
+}

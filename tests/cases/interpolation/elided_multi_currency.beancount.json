@@ -1,0 +1,93 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "elided_multi_currency.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "elided_multi_currency.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Food",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "elided_multi_currency.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Elided posting takes two currencies",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "3.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-3.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "EUR": "-3.00",
+      "GBP": "-10.00"
+    },
+    "Expenses:Food": {
+      "EUR": "3.00",
+      "GBP": "10.00"
+    }
+  }
+}

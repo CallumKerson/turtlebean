@@ -1,0 +1,16 @@
+2024-01-01 open Assets:Holdings VAFTGAG "FIFO"
+2024-01-01 open Assets:Cash
+2024-01-01 open Income:Gains
+
+2024-01-02 * "Buy one"
+  Assets:Holdings    10 VAFTGAG {200.00 GBP}
+  Assets:Cash
+
+2024-01-03 * "Buy two"
+  Assets:Holdings    10 VAFTGAG {210.00 GBP}
+  Assets:Cash
+
+2024-01-04 * "Sell across lots"
+  Assets:Holdings    -15 VAFTGAG {} @ 250.00 GBP
+  Assets:Cash        3750.00 GBP
+  Income:Gains

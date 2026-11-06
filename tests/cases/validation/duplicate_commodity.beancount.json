@@ -1,0 +1,28 @@
+{
+  "errors": [
+    {
+      "kind": "ValidationError",
+      "file": "duplicate_commodity.beancount",
+      "line": 2
+    }
+  ],
+  "entries": [
+    {
+      "type": "Commodity",
+      "date": "2024-01-01",
+      "file": "duplicate_commodity.beancount",
+      "line": 1,
+      "meta": {},
+      "currency": "GBP"
+    },
+    {
+      "type": "Commodity",
+      "date": "2024-01-02",
+      "file": "duplicate_commodity.beancount",
+      "line": 2,
+      "meta": {},
+      "currency": "GBP"
+    }
+  ],
+  "balances": {}
+}

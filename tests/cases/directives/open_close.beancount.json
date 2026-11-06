@@ -1,0 +1,98 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Plain",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:OneCurrency",
+      "currencies": ["GBP"],
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Assets:TwoCurrencies",
+      "currencies": ["GBP", "USD"],
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Assets:Spaced",
+      "currencies": ["GBP", "EUR"],
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Fifo",
+      "currencies": null,
+      "booking": "FIFO"
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:Strict",
+      "currencies": ["GBP"],
+      "booking": "STRICT"
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 7,
+      "meta": {},
+      "account": "Assets:Lifo",
+      "currencies": null,
+      "booking": "LIFO"
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "open_close.beancount",
+      "line": 8,
+      "meta": {},
+      "account": "Assets:None",
+      "currencies": null,
+      "booking": "NONE"
+    },
+    {
+      "type": "Close",
+      "date": "2024-02-01",
+      "file": "open_close.beancount",
+      "line": 9,
+      "meta": {
+        "reason": {
+          "string": "moved"
+        }
+      },
+      "account": "Assets:Plain"
+    }
+  ],
+  "balances": {}
+}

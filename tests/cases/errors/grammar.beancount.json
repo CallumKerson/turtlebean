@@ -1,0 +1,144 @@
+{
+  "errors": [
+    {
+      "kind": "ParserSyntaxError",
+      "file": "grammar.beancount",
+      "line": 5
+    },
+    {
+      "kind": "ParserSyntaxError",
+      "file": "grammar.beancount",
+      "line": 5
+    },
+    {
+      "kind": "InterpolationError",
+      "file": "grammar.beancount",
+      "line": 7
+    },
+    {
+      "kind": "ParserSyntaxError",
+      "file": "grammar.beancount",
+      "line": 13
+    },
+    {
+      "kind": "ParserSyntaxError",
+      "file": "grammar.beancount",
+      "line": 14
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "grammar.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "grammar.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Food",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "grammar.beancount",
+      "line": 6,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Posting without number",
+      "tags": [],
+      "links": [],
+      "postings": []
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-05",
+      "file": "grammar.beancount",
+      "line": 9,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Ok",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-08",
+      "file": "grammar.beancount",
+      "line": 16,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "After errors",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-2.00"
+    },
+    "Expenses:Food": {
+      "GBP": "2.00"
+    }
+  }
+}

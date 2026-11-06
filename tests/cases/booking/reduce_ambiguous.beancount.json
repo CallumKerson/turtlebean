@@ -1,0 +1,134 @@
+{
+  "errors": [
+    {
+      "kind": "AmbiguousMatchError",
+      "file": "reduce_ambiguous.beancount",
+      "line": 12
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "reduce_ambiguous.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Holdings",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "reduce_ambiguous.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "reduce_ambiguous.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy one",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "10",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "200.00",
+            "currency": "GBP",
+            "date": "2024-01-02",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-2000.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "reduce_ambiguous.beancount",
+      "line": 8,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Buy two",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Holdings",
+          "units": {
+            "number": "10",
+            "currency": "VAFTGAG"
+          },
+          "cost": {
+            "number": "210.00",
+            "currency": "GBP",
+            "date": "2024-01-03",
+            "label": null
+          },
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-2100.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "reduce_ambiguous.beancount",
+      "line": 12,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Ambiguous sale",
+      "tags": [],
+      "links": [],
+      "postings": []
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-4100.00"
+    },
+    "Assets:Holdings": {
+      "VAFTGAG": "20"
+    }
+  }
+}

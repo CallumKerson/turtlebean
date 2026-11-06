@@ -1,0 +1,14 @@
+2024-01-01 open Assets:Shares
+2024-01-01 open Assets:Cash
+2024-01-01 open Income:Gains
+2024-01-01 open Expenses:Fees
+
+2024-01-02 * "Buy"
+  Assets:Shares   1 ABC {39.37 USD}
+  Assets:Cash
+
+2024-01-03 * "Sell a fraction at cost; the gain rounds to -0.00"
+  Assets:Shares   -0.04241 ABC {} @ 39.37 USD
+  Income:Gains
+  Expenses:Fees    1.67 USD
+  Assets:Cash     -1.67 USD

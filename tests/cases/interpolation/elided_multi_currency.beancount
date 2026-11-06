@@ -1,0 +1,7 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Elided posting takes two currencies"
+  Expenses:Food   10.00 GBP
+  Expenses:Food    3.00 EUR
+  Assets:Cash

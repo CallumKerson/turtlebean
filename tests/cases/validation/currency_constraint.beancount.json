@@ -1,0 +1,75 @@
+{
+  "errors": [
+    {
+      "kind": "ValidationError",
+      "file": "currency_constraint.beancount",
+      "line": 4
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "currency_constraint.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": ["GBP"],
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "currency_constraint.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Food",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "currency_constraint.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Wrong currency",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "1.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "EUR"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "EUR": "-1.00"
+    },
+    "Expenses:Food": {
+      "EUR": "1.00"
+    }
+  }
+}

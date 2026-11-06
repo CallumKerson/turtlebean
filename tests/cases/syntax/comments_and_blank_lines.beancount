@@ -1,0 +1,15 @@
+; A comment at the top
+
+;; Another comment
+* An org-mode heading
+** A sub-heading
+
+2024-01-01 open Assets:Cash ; trailing comment
+  ; an indented comment
+2024-01-01 open Expenses:Food
+
+; comment between directives
+2024-01-02 * "Shop" "Lunch" ; comment after narration
+  Expenses:Food   5.00 GBP ; comment after posting
+  ; comment among postings
+  Assets:Cash    -5.00 GBP

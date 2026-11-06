@@ -1,0 +1,123 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "metadata.beancount",
+      "line": 1,
+      "meta": {
+        "opened-by": {
+          "string": "Callum"
+        }
+      },
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "metadata.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Expenses:Misc",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "metadata.beancount",
+      "line": 5,
+      "meta": {
+        "account": {
+          "string": "Assets:Cash"
+        },
+        "amount": {
+          "amount": {
+            "number": "10.00",
+            "currency": "GBP"
+          }
+        },
+        "bool-false": {
+          "bool": false
+        },
+        "bool-true": {
+          "bool": true
+        },
+        "camelCase": {
+          "string": "yes"
+        },
+        "currency": {
+          "string": "GBP"
+        },
+        "date": {
+          "date": "2023-12-31"
+        },
+        "empty": {
+          "null": null
+        },
+        "negative": {
+          "number": "-3"
+        },
+        "number": {
+          "number": "42.50"
+        },
+        "string": {
+          "string": "text"
+        },
+        "tag": {
+          "string": "sometag"
+        },
+        "under_score9": {
+          "string": "yes"
+        }
+      },
+      "flag": "*",
+      "payee": null,
+      "narration": "Metadata of every type",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {
+            "count": {
+              "number": "3"
+            },
+            "posting-meta": {
+              "string": "on the posting"
+            }
+          }
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-1.00"
+    },
+    "Expenses:Misc": {
+      "GBP": "1.00"
+    }
+  }
+}

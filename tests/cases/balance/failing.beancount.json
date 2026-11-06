@@ -1,0 +1,106 @@
+{
+  "errors": [
+    {
+      "kind": "BalanceError",
+      "file": "failing.beancount",
+      "line": 8
+    },
+    {
+      "kind": "BalanceError",
+      "file": "failing.beancount",
+      "line": 9
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "failing.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "failing.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Income:Salary",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "failing.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Pay",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "100.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Income:Salary",
+          "units": {
+            "number": "-100.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "failing.beancount",
+      "line": 8,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "99.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "failing.beancount",
+      "line": 9,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "100.00",
+        "currency": "EUR"
+      },
+      "tolerance": null
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "100.00"
+    },
+    "Income:Salary": {
+      "GBP": "-100.00"
+    }
+  }
+}

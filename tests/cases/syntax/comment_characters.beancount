@@ -1,0 +1,6 @@
+; A semicolon comment
+# A hash comment
+% A percent comment
+* An org-mode heading
+
+2024-01-01 open Assets:Bank

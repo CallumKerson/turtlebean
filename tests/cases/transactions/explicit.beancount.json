@@ -1,0 +1,129 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "explicit.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "explicit.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Food",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "explicit.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Income:Salary",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "explicit.beancount",
+      "line": 5,
+      "meta": {},
+      "flag": "*",
+      "payee": "Employer",
+      "narration": "Pay",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "1000.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Income:Salary",
+          "units": {
+            "number": "-1000.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "explicit.beancount",
+      "line": 9,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Split",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "5.25",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-15.25",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "984.75"
+    },
+    "Expenses:Food": {
+      "GBP": "15.25"
+    },
+    "Income:Salary": {
+      "GBP": "-1000.00"
+    }
+  }
+}

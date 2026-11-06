@@ -1,0 +1,213 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "arithmetic.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "arithmetic.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Misc",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "arithmetic.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Addition and multiplication",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "10.50",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-10.50",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "arithmetic.beancount",
+      "line": 8,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Division",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "3.333333333333333333333333333",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-3.333333333333333333333333333",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "arithmetic.beancount",
+      "line": 12,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Negation and subtraction",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "3.25",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-3.25",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-05",
+      "file": "arithmetic.beancount",
+      "line": 16,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Precedence",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "5",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-5",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-06",
+      "file": "arithmetic.beancount",
+      "line": 20,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Without spaces",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "6.20",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-6.20",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-28.28333333333333333333333333"
+    },
+    "Expenses:Misc": {
+      "GBP": "28.28333333333333333333333333"
+    }
+  }
+}

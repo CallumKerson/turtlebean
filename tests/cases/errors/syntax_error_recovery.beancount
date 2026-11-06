@@ -1,0 +1,20 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Good"
+  Expenses:Food   1.00 GBP
+  Assets:Cash
+
+2024-01-03 * "Bad amount"
+  Expenses:Food   1.00.00 GBP
+  Assets:Cash
+
+2024-01-04 * "Good again"
+  Expenses:Food   2.00 GBP
+  Assets:Cash
+
+this line is not beancount
+
+2024-01-05 * "Still parsed"
+  Expenses:Food   3.00 GBP
+  Assets:Cash

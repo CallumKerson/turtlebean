@@ -1,0 +1,15 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Does not balance"
+  Expenses:Food   10.00 GBP
+  Assets:Cash    -9.00 GBP
+
+2024-01-03 * "Two elided postings"
+  Expenses:Food
+  Assets:Cash
+
+2024-01-04 * "A single posting"
+  Expenses:Food   1.00 GBP
+
+2024-01-05 * "No postings"

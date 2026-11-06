@@ -1,0 +1,15 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Income:Salary
+
+2024-01-02 * "Pay"
+  Assets:Cash      100.004 GBP
+  Income:Salary   -100.004 GBP
+
+2024-01-03 balance Assets:Cash   100.00 GBP
+2024-01-03 balance Assets:Cash   100.0 GBP
+2024-01-03 balance Assets:Cash   100 GBP
+2024-01-03 balance Assets:Cash   100.01 GBP
+2024-01-03 balance Assets:Cash   100.015 GBP
+2024-01-03 balance Assets:Cash   100.02 GBP
+2024-01-03 balance Assets:Cash   99.00 ~ 1.01 GBP
+2024-01-03 balance Assets:Cash   99.00 ~ 0.99 GBP

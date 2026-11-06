@@ -1,0 +1,17 @@
+2024-01-01 open Assets:GBP
+2024-01-01 open Assets:EUR
+2024-01-01 open Expenses:Travel
+
+2024-01-02 * "Exchange with a price"
+  Assets:EUR    100.00 EUR @ 0.85 GBP
+  Assets:GBP    -85.00 GBP
+
+2024-01-03 * "Exchange with a total price"
+  Assets:EUR    100.00 EUR @@ 86.00 GBP
+  Assets:GBP    -86.00 GBP
+
+2024-01-04 * "Two currencies, each balanced"
+  Expenses:Travel   10.00 EUR
+  Assets:EUR       -10.00 EUR
+  Expenses:Travel    5.00 GBP
+  Assets:GBP        -5.00 GBP

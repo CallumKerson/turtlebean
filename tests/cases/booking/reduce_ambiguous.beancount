@@ -1,0 +1,14 @@
+2024-01-01 open Assets:Holdings
+2024-01-01 open Assets:Cash
+
+2024-01-02 * "Buy one"
+  Assets:Holdings    10 VAFTGAG {200.00 GBP}
+  Assets:Cash
+
+2024-01-03 * "Buy two"
+  Assets:Holdings    10 VAFTGAG {210.00 GBP}
+  Assets:Cash
+
+2024-01-04 * "Ambiguous sale"
+  Assets:Holdings    -5 VAFTGAG {}
+  Assets:Cash

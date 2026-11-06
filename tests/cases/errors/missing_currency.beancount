@@ -1,0 +1,6 @@
+2024-01-01 open Assets:Cash
+2024-01-01 open Expenses:Food
+
+2024-01-02 * "Number without currency"
+  Expenses:Food   1.00
+  Assets:Cash    -1.00 GBP

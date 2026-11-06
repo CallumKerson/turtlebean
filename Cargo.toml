@@ -11,6 +11,18 @@ categories = ["finance", "parser-implementations"]
 # Not on crates.io until the API settles
 publish = false
 
+[[test]]
+harness = false
+name = "conformance"
+
+[dependencies]
+rust_decimal = { version = "1.43.0", default-features = false, features = ["std"] }
+
+[dev-dependencies]
+libtest-mimic = "0.8.2"
+serde_json = { version = "1.0.154", features = ["preserve_order"] }
+similar = "3.2.1"
+
 [lints.clippy]
 pedantic = { level = "warn", priority = -1 }
 

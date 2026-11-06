@@ -1,0 +1,205 @@
+{
+  "errors": [
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 3
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 3
+    },
+    {
+      "kind": "BalanceError",
+      "file": "unopened_accounts.beancount",
+      "line": 9
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 9
+    },
+    {
+      "kind": "BalanceError",
+      "file": "unopened_accounts.beancount",
+      "line": 10
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 10
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 11
+    },
+    {
+      "kind": "BalanceError",
+      "file": "unopened_accounts.beancount",
+      "line": 12
+    },
+    {
+      "kind": "BalanceError",
+      "file": "unopened_accounts.beancount",
+      "line": 12
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 12
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 12
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unopened_accounts.beancount",
+      "line": 14
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unopened_accounts.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Equity:Opening-Balances",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-01",
+      "file": "unopened_accounts.beancount",
+      "line": 3,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Uses accounts that are never opened",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Bank:Current",
+          "units": {
+            "number": "100.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Expenses:Food",
+          "units": {
+            "number": "5.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Opening-Balances",
+          "units": {
+            "number": "-115.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "unopened_accounts.beancount",
+      "line": 9,
+      "meta": {},
+      "account": "Assets:Bank:Current",
+      "amount": {
+        "number": "100.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "unopened_accounts.beancount",
+      "line": 10,
+      "meta": {},
+      "account": "Assets:Bank:Savings",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "unopened_accounts.beancount",
+      "line": 11,
+      "meta": {},
+      "account": "Assets:Bank:Closed",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "unopened_accounts.beancount",
+      "line": 12,
+      "meta": {},
+      "account": "Assets:Bank:Current",
+      "amount": {
+        "number": "99.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Close",
+      "date": "2024-02-01",
+      "file": "unopened_accounts.beancount",
+      "line": 14,
+      "meta": {},
+      "account": "Assets:Bank:Closed"
+    }
+  ],
+  "balances": {
+    "Assets:Bank:Current": {
+      "GBP": "100.00"
+    },
+    "Equity:Opening-Balances": {
+      "GBP": "-115.00"
+    },
+    "Expenses:Food": {
+      "GBP": "15.00"
+    }
+  }
+}

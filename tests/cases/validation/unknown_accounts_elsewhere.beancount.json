@@ -1,0 +1,128 @@
+{
+  "errors": [
+    {
+      "kind": "BalanceError",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 3
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 3
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 4
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 4
+    },
+    {
+      "kind": "ValidationError",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 6
+    }
+  ],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-02",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 3,
+      "meta": {},
+      "account": "Assets:Unknown",
+      "amount": {
+        "number": "0",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Pad",
+      "date": "2024-01-02",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 4,
+      "meta": {},
+      "account": "Assets:Cash",
+      "source_account": "Equity:Unknown"
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "P",
+      "payee": null,
+      "narration": "(Padding inserted for Balance of 10.00 GBP for difference 10.00 GBP)",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Equity:Unknown",
+          "units": {
+            "number": "-10.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Balance",
+      "date": "2024-01-03",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 5,
+      "meta": {},
+      "account": "Assets:Cash",
+      "amount": {
+        "number": "10.00",
+        "currency": "GBP"
+      },
+      "tolerance": null
+    },
+    {
+      "type": "Close",
+      "date": "2024-01-04",
+      "file": "unknown_accounts_elsewhere.beancount",
+      "line": 6,
+      "meta": {},
+      "account": "Assets:NeverOpened"
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "10.00"
+    },
+    "Equity:Unknown": {
+      "GBP": "-10.00"
+    }
+  }
+}

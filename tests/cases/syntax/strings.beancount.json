@@ -1,0 +1,177 @@
+{
+  "errors": [],
+  "entries": [
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "strings.beancount",
+      "line": 1,
+      "meta": {},
+      "account": "Assets:Cash",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Open",
+      "date": "2024-01-01",
+      "file": "strings.beancount",
+      "line": 2,
+      "meta": {},
+      "account": "Expenses:Misc",
+      "currencies": null,
+      "booking": null
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-02",
+      "file": "strings.beancount",
+      "line": 4,
+      "meta": {},
+      "flag": "*",
+      "payee": "Café Ünïcødé",
+      "narration": "Quote \" inside",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-03",
+      "file": "strings.beancount",
+      "line": 8,
+      "meta": {},
+      "flag": "*",
+      "payee": "",
+      "narration": "",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-04",
+      "file": "strings.beancount",
+      "line": 12,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "A narration\nthat spans lines",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    },
+    {
+      "type": "Transaction",
+      "date": "2024-01-05",
+      "file": "strings.beancount",
+      "line": 17,
+      "meta": {},
+      "flag": "*",
+      "payee": null,
+      "narration": "Backslash \\ and tab \t",
+      "tags": [],
+      "links": [],
+      "postings": [
+        {
+          "account": "Expenses:Misc",
+          "units": {
+            "number": "1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        },
+        {
+          "account": "Assets:Cash",
+          "units": {
+            "number": "-1.00",
+            "currency": "GBP"
+          },
+          "cost": null,
+          "price": null,
+          "flag": null,
+          "meta": {}
+        }
+      ]
+    }
+  ],
+  "balances": {
+    "Assets:Cash": {
+      "GBP": "-4.00"
+    },
+    "Expenses:Misc": {
+      "GBP": "4.00"
+    }
+  }
+}
