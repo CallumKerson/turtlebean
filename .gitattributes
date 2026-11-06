@@ -1,0 +1,2 @@
+# Test cases keep their exact bytes, including CRLF line endings
+tests/cases/** -text
