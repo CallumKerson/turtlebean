@@ -179,9 +179,9 @@ url = "https://github.com/EmbarkStudios/cargo-deny/releases/download/0.20.2/carg
 url_api = "https://api.github.com/repos/EmbarkStudios/cargo-deny/releases/assets/471599057"
 
 [[tools."cargo:cargo-nextest"]]
-version = "0.9.148"
+version = "0.9.150"
 backend = "cargo:cargo-nextest"
-specifiers = ["0.9.148"]
+specifiers = ["0.9.150"]
 
 [[tools."cargo:cargo-shear"]]
 version = "1.14.0"
