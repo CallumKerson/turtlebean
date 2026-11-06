@@ -1,4 +1,12 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>CallumKerson/renovate-config#v1.2.0"]
+  "extends": ["github>CallumKerson/renovate-config#v1.2.0"],
+  "packageRules": [
+    {
+      "description": "The minimum supported Rust version changes only on purpose, with rust-version in Cargo.toml",
+      "matchManagers": ["mise"],
+      "matchDepTypes": ["task-msrv-tools"],
+      "enabled": false
+    }
+  ]
 }
