@@ -1,0 +1,5 @@
+---
+rules:
+  # Runs take a minute or two; 15 leaves room for a cold Rust build
+  missing-timeout:
+    default-minutes: 15
