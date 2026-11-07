@@ -19,6 +19,11 @@ use serde_json::Value;
 
 const ROOT: &str = env!("CARGO_MANIFEST_DIR");
 
+/// The plugins `turtlebean::load_file` runs; keep in step with
+/// `Loader::standard`. The oracle keeps these when it strips a real
+/// ledger's plugins.
+const RUN_PLUGINS: &[&str] = &["beancount.plugins.auto_accounts"];
+
 fn main() {
     let args = Arguments::from_args();
     let root = Path::new(ROOT);
@@ -119,6 +124,7 @@ fn compare_with_oracle(path: &Path) -> Result<(), Failed> {
         .args(["run", "--quiet", "--script"])
         .arg(Path::new(ROOT).join("tests/oracle/dump.py"))
         .arg("--strip-plugins")
+        .args(RUN_PLUGINS.iter().flat_map(|name| ["--keep-plugin", name]))
         .arg(path)
         .output()
         .map_err(|e| format!("running the oracle: {e}"))?;
@@ -126,7 +132,16 @@ fn compare_with_oracle(path: &Path) -> Result<(), Failed> {
         return Err(String::from_utf8_lossy(&output.stderr).into_owned().into());
     }
     let expected: Value = serde_json::from_slice(&output.stdout).map_err(|e| e.to_string())?;
-    compare(path, &expected, false)
+    let mut ledger = turtlebean::load_file(path);
+    // The oracle had these plugins stripped, so it has nothing to match them.
+    ledger.errors.retain(|e| !is_unrun_plugin(e));
+    compare_ledger(path, &ledger, &expected)
+}
+
+fn is_unrun_plugin(error: &turtlebean::Error) -> bool {
+    error.kind == turtlebean::ErrorKind::Unsupported
+        && error.source.is_none()
+        && error.message.starts_with("turtlebean doesn't run plugin")
 }
 
 fn compare(path: &Path, expected: &Value, allow_unsupported: bool) -> Result<(), Failed> {
@@ -139,12 +154,20 @@ fn compare(path: &Path, expected: &Value, allow_unsupported: bool) -> Result<(),
     {
         return Ok(());
     }
+    compare_ledger(path, &ledger, expected)
+}
+
+fn compare_ledger(
+    path: &Path,
+    ledger: &turtlebean::Ledger,
+    expected: &Value,
+) -> Result<(), Failed> {
     let root = path
         .parent()
         .unwrap_or(Path::new("."))
         .canonicalize()
         .map_err(|e| e.to_string())?;
-    let actual = render::render(&ledger, &root);
+    let actual = render::render(ledger, &root);
     if &actual == expected {
         return Ok(());
     }

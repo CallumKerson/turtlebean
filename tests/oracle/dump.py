@@ -11,12 +11,12 @@ types, and runs beancount as a separate program.
 Usage:
     uv run --script tests/oracle/dump.py FILE [FILE ...]
     uv run --script tests/oracle/dump.py --write FILE [FILE ...]
-    uv run --script tests/oracle/dump.py --strip-plugins FILE
+    uv run --script tests/oracle/dump.py --strip-plugins [--keep-plugin NAME ...] FILE
 
 --write saves each result next to its input as FILE.json instead of printing.
 --strip-plugins loads a copy of the ledger's directory with `plugin` lines and
 the `documents` option removed, for comparing real ledgers whose plugins
-turtlebean doesn't run.
+turtlebean doesn't run. --keep-plugin leaves a plugin that turtlebean does run.
 """
 
 import argparse
@@ -195,8 +195,9 @@ def dump(path, root):
     }
 
 
-def strip_plugins(path):
-    """Copy the ledger's directory, dropping plugins and the documents option."""
+def strip_plugins(path, keep):
+    """Copy the ledger's directory, dropping the documents option and every
+    plugin not in `keep`."""
     source_root = path.resolve().parent
     target = Path(tempfile.mkdtemp(prefix="turtlebean-oracle-")).resolve()
     shutil.copytree(
@@ -204,12 +205,18 @@ def strip_plugins(path):
     )
     for file in target.rglob("*.beancount"):
         lines = file.read_text(encoding="utf-8").splitlines(keepends=True)
-        kept = [
-            ";" + ln if ln.startswith(("plugin ", 'option "documents"')) else ln
-            for ln in lines
-        ]
+        kept = [";" + ln if stripped(ln, keep) else ln for ln in lines]
         file.write_text("".join(kept), encoding="utf-8")
     return target, target / path.name
+
+
+def stripped(line, keep):
+    if line.startswith('option "documents"'):
+        return True
+    if not line.startswith("plugin "):
+        return False
+    name = line.split('"')[1] if line.count('"') >= 2 else ""
+    return name not in keep
 
 
 def main():
@@ -217,11 +224,12 @@ def main():
     parser.add_argument("files", nargs="+", type=Path)
     parser.add_argument("--write", action="store_true")
     parser.add_argument("--strip-plugins", action="store_true")
+    parser.add_argument("--keep-plugin", action="append", default=[])
     args = parser.parse_args()
 
     for path in args.files:
         if args.strip_plugins:
-            root, target = strip_plugins(path)
+            root, target = strip_plugins(path, set(args.keep_plugin))
             try:
                 result = dump(target, root)
             finally:
