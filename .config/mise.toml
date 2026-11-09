@@ -79,7 +79,7 @@ version = "0.25.1"
 version = "2.7.2"
 
 [tools.cargo-binstall]
-version = "1.26.0"
+version = "1.26.2"
 
 [tools.cargo-deny]
 version = "0.20.2"
