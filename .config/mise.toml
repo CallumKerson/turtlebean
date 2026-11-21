@@ -85,7 +85,7 @@ version = "1.26.2"
 version = "0.20.2"
 
 [tools."cargo:cargo-nextest"]
-version = "0.9.150"
+version = "0.9.152"
 
 [tools."cargo:cargo-shear"]
 version = "1.14.0"
