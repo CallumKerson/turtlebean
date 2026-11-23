@@ -88,7 +88,7 @@ version = "0.20.2"
 version = "0.9.150"
 
 [tools."cargo:cargo-shear"]
-version = "1.14.0"
+version = "1.14.1"
 
 [tools.hk]
 version = "2.7.0"
