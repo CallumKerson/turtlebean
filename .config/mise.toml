@@ -107,7 +107,7 @@ version = "0.32.2"
 version = "0.16"
 
 [tools.rumdl]
-version = "v0.3.2"
+version = "v0.3.4"
 
 [tools.rust]
 version = "1.99"
